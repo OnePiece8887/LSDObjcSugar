@@ -93,7 +93,7 @@ Pod::Spec.new do |s|
 
   s.source_files  = "LSDObjcSugar", "LSDObjcSugar/**/*.{h,m}"
   s.exclude_files = "LSDObjcSugar/Exclude"
-
+  echo "3.0" > .swift-version 
   # s.public_header_files = "Classes/**/*.h"
 
 
