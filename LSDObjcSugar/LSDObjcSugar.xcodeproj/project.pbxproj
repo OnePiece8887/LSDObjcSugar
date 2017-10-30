@@ -1,0 +1,633 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA6472E21FA6F08A002B1D87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6472E11FA6F08A002B1D87 /* AppDelegate.m */; };
+		EA6472E51FA6F08A002B1D87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6472E41FA6F08A002B1D87 /* ViewController.m */; };
+		EA6472E81FA6F08A002B1D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6472E61FA6F08A002B1D87 /* Main.storyboard */; };
+		EA6472EA1FA6F08A002B1D87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA6472E91FA6F08A002B1D87 /* Assets.xcassets */; };
+		EA6472ED1FA6F08A002B1D87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6472EB1FA6F08A002B1D87 /* LaunchScreen.storyboard */; };
+		EA6472F01FA6F08A002B1D87 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6472EF1FA6F08A002B1D87 /* main.m */; };
+		EA6472FA1FA6F08A002B1D87 /* LSDObjcSugarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6472F91FA6F08A002B1D87 /* LSDObjcSugarTests.m */; };
+		EA6473051FA6F08A002B1D87 /* LSDObjcSugarUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473041FA6F08A002B1D87 /* LSDObjcSugarUITests.m */; };
+		EA64732C1FA6F0CE002B1D87 /* MBProgressHUD+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473151FA6F0CE002B1D87 /* MBProgressHUD+LSDObjcSugar.m */; };
+		EA64732D1FA6F0CE002B1D87 /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473171FA6F0CE002B1D87 /* NSArray+Log.m */; };
+		EA64732E1FA6F0CE002B1D87 /* NSBundle+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473191FA6F0CE002B1D87 /* NSBundle+LSDObjcSugar.m */; };
+		EA64732F1FA6F0CE002B1D87 /* NSDate+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64731B1FA6F0CE002B1D87 /* NSDate+LSDObjcSugar.m */; };
+		EA6473301FA6F0CE002B1D87 /* NSString+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64731D1FA6F0CE002B1D87 /* NSString+LSDObjcSugar.m */; };
+		EA6473311FA6F0CE002B1D87 /* UIButton+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64731F1FA6F0CE002B1D87 /* UIButton+LSDObjcSugar.m */; };
+		EA6473321FA6F0CE002B1D87 /* UIColor+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473211FA6F0CE002B1D87 /* UIColor+LSDObjcSugar.m */; };
+		EA6473331FA6F0CE002B1D87 /* UIImage+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473231FA6F0CE002B1D87 /* UIImage+LSDObjcSugar.m */; };
+		EA6473341FA6F0CE002B1D87 /* UILabel+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473251FA6F0CE002B1D87 /* UILabel+LSDObjcSugar.m */; };
+		EA6473351FA6F0CE002B1D87 /* UINavigationController+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473271FA6F0CE002B1D87 /* UINavigationController+LSDObjcSugar.m */; };
+		EA6473361FA6F0CE002B1D87 /* UITableViewCell+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6473291FA6F0CE002B1D87 /* UITableViewCell+LSDObjcSugar.m */; };
+		EA6473371FA6F0CE002B1D87 /* UIView+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EA64732B1FA6F0CE002B1D87 /* UIView+LSDObjcSugar.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA6472F61FA6F08A002B1D87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6472D51FA6F089002B1D87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA6472DC1FA6F08A002B1D87;
+			remoteInfo = LSDObjcSugar;
+		};
+		EA6473011FA6F08A002B1D87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA6472D51FA6F089002B1D87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA6472DC1FA6F08A002B1D87;
+			remoteInfo = LSDObjcSugar;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA6472DD1FA6F08A002B1D87 /* LSDObjcSugar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSDObjcSugar.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6472E01FA6F08A002B1D87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA6472E11FA6F08A002B1D87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA6472E31FA6F08A002B1D87 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA6472E41FA6F08A002B1D87 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA6472E71FA6F08A002B1D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA6472E91FA6F08A002B1D87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA6472EC1FA6F08A002B1D87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA6472EE1FA6F08A002B1D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA6472EF1FA6F08A002B1D87 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA6472F51FA6F08A002B1D87 /* LSDObjcSugarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSDObjcSugarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6472F91FA6F08A002B1D87 /* LSDObjcSugarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDObjcSugarTests.m; sourceTree = "<group>"; };
+		EA6472FB1FA6F08A002B1D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA6473001FA6F08A002B1D87 /* LSDObjcSugarUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LSDObjcSugarUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6473041FA6F08A002B1D87 /* LSDObjcSugarUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSDObjcSugarUITests.m; sourceTree = "<group>"; };
+		EA6473061FA6F08A002B1D87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA6473131FA6F0CE002B1D87 /* LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSDObjcSugar.h; sourceTree = "<group>"; };
+		EA6473141FA6F0CE002B1D87 /* MBProgressHUD+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA6473151FA6F0CE002B1D87 /* MBProgressHUD+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA6473161FA6F0CE002B1D87 /* NSArray+Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		EA6473171FA6F0CE002B1D87 /* NSArray+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
+		EA6473181FA6F0CE002B1D87 /* NSBundle+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA6473191FA6F0CE002B1D87 /* NSBundle+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA64731A1FA6F0CE002B1D87 /* NSDate+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA64731B1FA6F0CE002B1D87 /* NSDate+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA64731C1FA6F0CE002B1D87 /* NSString+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA64731D1FA6F0CE002B1D87 /* NSString+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA64731E1FA6F0CE002B1D87 /* UIButton+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA64731F1FA6F0CE002B1D87 /* UIButton+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA6473201FA6F0CE002B1D87 /* UIColor+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA6473211FA6F0CE002B1D87 /* UIColor+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA6473221FA6F0CE002B1D87 /* UIImage+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA6473231FA6F0CE002B1D87 /* UIImage+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA6473241FA6F0CE002B1D87 /* UILabel+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA6473251FA6F0CE002B1D87 /* UILabel+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA6473261FA6F0CE002B1D87 /* UINavigationController+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA6473271FA6F0CE002B1D87 /* UINavigationController+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA6473281FA6F0CE002B1D87 /* UITableViewCell+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA6473291FA6F0CE002B1D87 /* UITableViewCell+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EA64732A1FA6F0CE002B1D87 /* UIView+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EA64732B1FA6F0CE002B1D87 /* UIView+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSDObjcSugar.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA6472DA1FA6F08A002B1D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6472F21FA6F08A002B1D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6472FD1FA6F08A002B1D87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA6472D41FA6F089002B1D87 = {
+			isa = PBXGroup;
+			children = (
+				EA6472DF1FA6F08A002B1D87 /* LSDObjcSugar */,
+				EA6472F81FA6F08A002B1D87 /* LSDObjcSugarTests */,
+				EA6473031FA6F08A002B1D87 /* LSDObjcSugarUITests */,
+				EA6472DE1FA6F08A002B1D87 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA6472DE1FA6F08A002B1D87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA6472DD1FA6F08A002B1D87 /* LSDObjcSugar.app */,
+				EA6472F51FA6F08A002B1D87 /* LSDObjcSugarTests.xctest */,
+				EA6473001FA6F08A002B1D87 /* LSDObjcSugarUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA6472DF1FA6F08A002B1D87 /* LSDObjcSugar */ = {
+			isa = PBXGroup;
+			children = (
+				EA6473121FA6F0CE002B1D87 /* LSDObjcSugar */,
+				EA6472E01FA6F08A002B1D87 /* AppDelegate.h */,
+				EA6472E11FA6F08A002B1D87 /* AppDelegate.m */,
+				EA6472E31FA6F08A002B1D87 /* ViewController.h */,
+				EA6472E41FA6F08A002B1D87 /* ViewController.m */,
+				EA6472E61FA6F08A002B1D87 /* Main.storyboard */,
+				EA6472E91FA6F08A002B1D87 /* Assets.xcassets */,
+				EA6472EB1FA6F08A002B1D87 /* LaunchScreen.storyboard */,
+				EA6472EE1FA6F08A002B1D87 /* Info.plist */,
+				EA6472EF1FA6F08A002B1D87 /* main.m */,
+			);
+			path = LSDObjcSugar;
+			sourceTree = "<group>";
+		};
+		EA6472F81FA6F08A002B1D87 /* LSDObjcSugarTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA6472F91FA6F08A002B1D87 /* LSDObjcSugarTests.m */,
+				EA6472FB1FA6F08A002B1D87 /* Info.plist */,
+			);
+			path = LSDObjcSugarTests;
+			sourceTree = "<group>";
+		};
+		EA6473031FA6F08A002B1D87 /* LSDObjcSugarUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA6473041FA6F08A002B1D87 /* LSDObjcSugarUITests.m */,
+				EA6473061FA6F08A002B1D87 /* Info.plist */,
+			);
+			path = LSDObjcSugarUITests;
+			sourceTree = "<group>";
+		};
+		EA6473121FA6F0CE002B1D87 /* LSDObjcSugar */ = {
+			isa = PBXGroup;
+			children = (
+				EA6473131FA6F0CE002B1D87 /* LSDObjcSugar.h */,
+				EA6473141FA6F0CE002B1D87 /* MBProgressHUD+LSDObjcSugar.h */,
+				EA6473151FA6F0CE002B1D87 /* MBProgressHUD+LSDObjcSugar.m */,
+				EA6473161FA6F0CE002B1D87 /* NSArray+Log.h */,
+				EA6473171FA6F0CE002B1D87 /* NSArray+Log.m */,
+				EA6473181FA6F0CE002B1D87 /* NSBundle+LSDObjcSugar.h */,
+				EA6473191FA6F0CE002B1D87 /* NSBundle+LSDObjcSugar.m */,
+				EA64731A1FA6F0CE002B1D87 /* NSDate+LSDObjcSugar.h */,
+				EA64731B1FA6F0CE002B1D87 /* NSDate+LSDObjcSugar.m */,
+				EA64731C1FA6F0CE002B1D87 /* NSString+LSDObjcSugar.h */,
+				EA64731D1FA6F0CE002B1D87 /* NSString+LSDObjcSugar.m */,
+				EA64731E1FA6F0CE002B1D87 /* UIButton+LSDObjcSugar.h */,
+				EA64731F1FA6F0CE002B1D87 /* UIButton+LSDObjcSugar.m */,
+				EA6473201FA6F0CE002B1D87 /* UIColor+LSDObjcSugar.h */,
+				EA6473211FA6F0CE002B1D87 /* UIColor+LSDObjcSugar.m */,
+				EA6473221FA6F0CE002B1D87 /* UIImage+LSDObjcSugar.h */,
+				EA6473231FA6F0CE002B1D87 /* UIImage+LSDObjcSugar.m */,
+				EA6473241FA6F0CE002B1D87 /* UILabel+LSDObjcSugar.h */,
+				EA6473251FA6F0CE002B1D87 /* UILabel+LSDObjcSugar.m */,
+				EA6473261FA6F0CE002B1D87 /* UINavigationController+LSDObjcSugar.h */,
+				EA6473271FA6F0CE002B1D87 /* UINavigationController+LSDObjcSugar.m */,
+				EA6473281FA6F0CE002B1D87 /* UITableViewCell+LSDObjcSugar.h */,
+				EA6473291FA6F0CE002B1D87 /* UITableViewCell+LSDObjcSugar.m */,
+				EA64732A1FA6F0CE002B1D87 /* UIView+LSDObjcSugar.h */,
+				EA64732B1FA6F0CE002B1D87 /* UIView+LSDObjcSugar.m */,
+			);
+			path = LSDObjcSugar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA6472DC1FA6F08A002B1D87 /* LSDObjcSugar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6473091FA6F08A002B1D87 /* Build configuration list for PBXNativeTarget "LSDObjcSugar" */;
+			buildPhases = (
+				EA6472D91FA6F08A002B1D87 /* Sources */,
+				EA6472DA1FA6F08A002B1D87 /* Frameworks */,
+				EA6472DB1FA6F08A002B1D87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LSDObjcSugar;
+			productName = LSDObjcSugar;
+			productReference = EA6472DD1FA6F08A002B1D87 /* LSDObjcSugar.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA6472F41FA6F08A002B1D87 /* LSDObjcSugarTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA64730C1FA6F08A002B1D87 /* Build configuration list for PBXNativeTarget "LSDObjcSugarTests" */;
+			buildPhases = (
+				EA6472F11FA6F08A002B1D87 /* Sources */,
+				EA6472F21FA6F08A002B1D87 /* Frameworks */,
+				EA6472F31FA6F08A002B1D87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA6472F71FA6F08A002B1D87 /* PBXTargetDependency */,
+			);
+			name = LSDObjcSugarTests;
+			productName = LSDObjcSugarTests;
+			productReference = EA6472F51FA6F08A002B1D87 /* LSDObjcSugarTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA6472FF1FA6F08A002B1D87 /* LSDObjcSugarUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA64730F1FA6F08A002B1D87 /* Build configuration list for PBXNativeTarget "LSDObjcSugarUITests" */;
+			buildPhases = (
+				EA6472FC1FA6F08A002B1D87 /* Sources */,
+				EA6472FD1FA6F08A002B1D87 /* Frameworks */,
+				EA6472FE1FA6F08A002B1D87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA6473021FA6F08A002B1D87 /* PBXTargetDependency */,
+			);
+			name = LSDObjcSugarUITests;
+			productName = LSDObjcSugarUITests;
+			productReference = EA6473001FA6F08A002B1D87 /* LSDObjcSugarUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA6472D51FA6F089002B1D87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = onePiece;
+				TargetAttributes = {
+					EA6472DC1FA6F08A002B1D87 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					EA6472F41FA6F08A002B1D87 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EA6472DC1FA6F08A002B1D87;
+					};
+					EA6472FF1FA6F08A002B1D87 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = EA6472DC1FA6F08A002B1D87;
+					};
+				};
+			};
+			buildConfigurationList = EA6472D81FA6F089002B1D87 /* Build configuration list for PBXProject "LSDObjcSugar" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA6472D41FA6F089002B1D87;
+			productRefGroup = EA6472DE1FA6F08A002B1D87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA6472DC1FA6F08A002B1D87 /* LSDObjcSugar */,
+				EA6472F41FA6F08A002B1D87 /* LSDObjcSugarTests */,
+				EA6472FF1FA6F08A002B1D87 /* LSDObjcSugarUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA6472DB1FA6F08A002B1D87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6472ED1FA6F08A002B1D87 /* LaunchScreen.storyboard in Resources */,
+				EA6472EA1FA6F08A002B1D87 /* Assets.xcassets in Resources */,
+				EA6472E81FA6F08A002B1D87 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6472F31FA6F08A002B1D87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6472FE1FA6F08A002B1D87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA6472D91FA6F08A002B1D87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6473301FA6F0CE002B1D87 /* NSString+LSDObjcSugar.m in Sources */,
+				EA64732D1FA6F0CE002B1D87 /* NSArray+Log.m in Sources */,
+				EA64732E1FA6F0CE002B1D87 /* NSBundle+LSDObjcSugar.m in Sources */,
+				EA6472E51FA6F08A002B1D87 /* ViewController.m in Sources */,
+				EA6472F01FA6F08A002B1D87 /* main.m in Sources */,
+				EA6473351FA6F0CE002B1D87 /* UINavigationController+LSDObjcSugar.m in Sources */,
+				EA6473341FA6F0CE002B1D87 /* UILabel+LSDObjcSugar.m in Sources */,
+				EA64732C1FA6F0CE002B1D87 /* MBProgressHUD+LSDObjcSugar.m in Sources */,
+				EA6473311FA6F0CE002B1D87 /* UIButton+LSDObjcSugar.m in Sources */,
+				EA6472E21FA6F08A002B1D87 /* AppDelegate.m in Sources */,
+				EA6473331FA6F0CE002B1D87 /* UIImage+LSDObjcSugar.m in Sources */,
+				EA6473371FA6F0CE002B1D87 /* UIView+LSDObjcSugar.m in Sources */,
+				EA6473321FA6F0CE002B1D87 /* UIColor+LSDObjcSugar.m in Sources */,
+				EA6473361FA6F0CE002B1D87 /* UITableViewCell+LSDObjcSugar.m in Sources */,
+				EA64732F1FA6F0CE002B1D87 /* NSDate+LSDObjcSugar.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6472F11FA6F08A002B1D87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6472FA1FA6F08A002B1D87 /* LSDObjcSugarTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA6472FC1FA6F08A002B1D87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6473051FA6F08A002B1D87 /* LSDObjcSugarUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA6472F71FA6F08A002B1D87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA6472DC1FA6F08A002B1D87 /* LSDObjcSugar */;
+			targetProxy = EA6472F61FA6F08A002B1D87 /* PBXContainerItemProxy */;
+		};
+		EA6473021FA6F08A002B1D87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA6472DC1FA6F08A002B1D87 /* LSDObjcSugar */;
+			targetProxy = EA6473011FA6F08A002B1D87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA6472E61FA6F08A002B1D87 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6472E71FA6F08A002B1D87 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA6472EB1FA6F08A002B1D87 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA6472EC1FA6F08A002B1D87 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA6473071FA6F08A002B1D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA6473081FA6F08A002B1D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA64730A1FA6F08A002B1D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSDObjcSugar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onePiece.LSDObjcSugar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA64730B1FA6F08A002B1D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSDObjcSugar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onePiece.LSDObjcSugar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA64730D1FA6F08A002B1D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSDObjcSugarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onePiece.LSDObjcSugarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSDObjcSugar.app/LSDObjcSugar";
+			};
+			name = Debug;
+		};
+		EA64730E1FA6F08A002B1D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSDObjcSugarTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onePiece.LSDObjcSugarTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LSDObjcSugar.app/LSDObjcSugar";
+			};
+			name = Release;
+		};
+		EA6473101FA6F08A002B1D87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSDObjcSugarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onePiece.LSDObjcSugarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LSDObjcSugar;
+			};
+			name = Debug;
+		};
+		EA6473111FA6F08A002B1D87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LSDObjcSugarUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = onePiece.LSDObjcSugarUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LSDObjcSugar;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA6472D81FA6F089002B1D87 /* Build configuration list for PBXProject "LSDObjcSugar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6473071FA6F08A002B1D87 /* Debug */,
+				EA6473081FA6F08A002B1D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA6473091FA6F08A002B1D87 /* Build configuration list for PBXNativeTarget "LSDObjcSugar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA64730A1FA6F08A002B1D87 /* Debug */,
+				EA64730B1FA6F08A002B1D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA64730C1FA6F08A002B1D87 /* Build configuration list for PBXNativeTarget "LSDObjcSugarTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA64730D1FA6F08A002B1D87 /* Debug */,
+				EA64730E1FA6F08A002B1D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA64730F1FA6F08A002B1D87 /* Build configuration list for PBXNativeTarget "LSDObjcSugarUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6473101FA6F08A002B1D87 /* Debug */,
+				EA6473111FA6F08A002B1D87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA6472D51FA6F089002B1D87 /* Project object */;
+}
