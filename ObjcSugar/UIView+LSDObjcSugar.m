@@ -14,7 +14,7 @@
     
     NSString *className = NSStringFromClass(self);
     NSString *xibName = [NSString stringWithFormat:@"%@Xib",className];
-    return KLoadXibView(xibName);
+    return [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
     
 }
 
