@@ -91,8 +91,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "LSDObjcSugar", "LSDObjcSugar/**/*.{h,m}"
-  s.exclude_files = "LSDObjcSugar/Exclude"
+  s.source_files  = "ObjcSugar/**/*.{h,m}"
   
   # s.public_header_files = "Classes/**/*.h"
 
