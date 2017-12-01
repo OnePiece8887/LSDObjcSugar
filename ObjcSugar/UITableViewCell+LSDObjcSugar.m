@@ -2,7 +2,7 @@
 //  UITableViewCell+LSDObjcSugar.m
 //  EasyToBuy
 //
-//  Created by 神州锐达 on 2017/9/7.
+//  Created by ls on 2017/9/7.
 //  Copyright © 2017年 OnePiece. All rights reserved.
 //
 
