@@ -13,10 +13,6 @@
     
     NSString *ReusedID = NSStringFromClass(self);
     
-    UINib *nib = [UINib nibWithNibName:[NSString stringWithFormat:@"%@Xib",ReusedID] bundle:[NSBundle mainBundle]];
-    
-    [tableView registerNib:nib forCellReuseIdentifier:ReusedID];
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReusedID];
     
     if (cell == nil) {

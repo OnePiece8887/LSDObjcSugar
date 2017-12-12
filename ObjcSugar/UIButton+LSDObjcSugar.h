@@ -10,11 +10,16 @@
 
 @interface UIButton (LSDObjcSugar)
 
+#pragma mark --普通字符串类型的button
++(UIButton *_Nullable)lsd_buttonWithTitle:(nullable NSString *)title fontSize:(CGFloat)fontSize textColor:(nullable UIColor *)textColor addTarget:(nullable id)target action:(nonnull SEL)action forControlEvents:(UIControlEvents)controlEvent;
+
+
+
 #pragma mark -- 属性字符串类型的button
-+(instancetype)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor;
++(UIButton *_Nullable)lsd_AttributeButtonWithTitle:(nullable NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *_Nullable)textColor;
 ///适用于图片有后缀的
-+ (instancetype)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix ;
-+ (instancetype)lsd_buttonWithAttributedText:(NSAttributedString *)attributedText imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix;
++ (UIButton *_Nullable)lsd_AttributeButtonWithTitle:(nullable NSString *)title fontSize:(CGFloat)fontSize textColor:(nullable UIColor *)textColor imageName:(nullable NSString *)imageName backImageName:(nullable NSString *)backImageName highlightSuffix:(nullable NSString *)highlightSuffix ;
++ (UIButton *_Nullable)lsd_AttributeButtonWithAttributedText:(nullable NSAttributedString *)attributedText imageName:(nullable NSString *)imageName backImageName:(nullable NSString *)backImageName highlightSuffix:(nullable NSString *)highlightSuffix;
 
 
 @end

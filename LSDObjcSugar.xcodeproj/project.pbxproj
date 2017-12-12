@@ -26,7 +26,6 @@
 		EAB2AA9C1FA709280060052F /* UIColor+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA8B1FA709280060052F /* UIColor+LSDObjcSugar.m */; };
 		EAB2AA9D1FA709280060052F /* UIImage+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA8D1FA709280060052F /* UIImage+LSDObjcSugar.m */; };
 		EAB2AA9E1FA709280060052F /* UILabel+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA8F1FA709280060052F /* UILabel+LSDObjcSugar.m */; };
-		EAB2AA9F1FA709280060052F /* UINavigationController+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA911FA709280060052F /* UINavigationController+LSDObjcSugar.m */; };
 		EAB2AAA01FA709280060052F /* UITableViewCell+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA931FA709280060052F /* UITableViewCell+LSDObjcSugar.m */; };
 		EAB2AAA11FA709280060052F /* UIView+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA951FA709280060052F /* UIView+LSDObjcSugar.m */; };
 /* End PBXBuildFile section */
@@ -91,8 +90,6 @@
 		EAB2AA8D1FA709280060052F /* UIImage+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		EAB2AA8E1FA709280060052F /* UILabel+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+LSDObjcSugar.h"; sourceTree = "<group>"; };
 		EAB2AA8F1FA709280060052F /* UILabel+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+LSDObjcSugar.m"; sourceTree = "<group>"; };
-		EAB2AA901FA709280060052F /* UINavigationController+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+LSDObjcSugar.h"; sourceTree = "<group>"; };
-		EAB2AA911FA709280060052F /* UINavigationController+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		EAB2AA921FA709280060052F /* UITableViewCell+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+LSDObjcSugar.h"; sourceTree = "<group>"; };
 		EAB2AA931FA709280060052F /* UITableViewCell+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		EAB2AA941FA709280060052F /* UIView+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LSDObjcSugar.h"; sourceTree = "<group>"; };
@@ -209,8 +206,6 @@
 				EAB2AA8D1FA709280060052F /* UIImage+LSDObjcSugar.m */,
 				EAB2AA8E1FA709280060052F /* UILabel+LSDObjcSugar.h */,
 				EAB2AA8F1FA709280060052F /* UILabel+LSDObjcSugar.m */,
-				EAB2AA901FA709280060052F /* UINavigationController+LSDObjcSugar.h */,
-				EAB2AA911FA709280060052F /* UINavigationController+LSDObjcSugar.m */,
 				EAB2AA921FA709280060052F /* UITableViewCell+LSDObjcSugar.h */,
 				EAB2AA931FA709280060052F /* UITableViewCell+LSDObjcSugar.m */,
 				EAB2AA941FA709280060052F /* UIView+LSDObjcSugar.h */,
@@ -507,7 +502,6 @@
 				EAB20E7C1FB03CD5004A3C13 /* UIResponder+LSDObjcSugar.m in Sources */,
 				EA6472E51FA6F08A002B1D87 /* ViewController.m in Sources */,
 				EA6472F01FA6F08A002B1D87 /* main.m in Sources */,
-				EAB2AA9F1FA709280060052F /* UINavigationController+LSDObjcSugar.m in Sources */,
 				EAB2AA9E1FA709280060052F /* UILabel+LSDObjcSugar.m in Sources */,
 				EAB2AA961FA709280060052F /* MBProgressHUD+LSDObjcSugar.m in Sources */,
 				EAB2AA9B1FA709280060052F /* UIButton+LSDObjcSugar.m in Sources */,

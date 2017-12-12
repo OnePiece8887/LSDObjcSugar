@@ -83,19 +83,19 @@
 }
 
 #pragma mark - 颜色值
-- (u_int8_t)hm_redValue {
+- (u_int8_t)lsd_redValue {
     return (u_int8_t)(CGColorGetComponents(self.CGColor)[0] * 255);
 }
 
-- (u_int8_t)hm_greenValue {
+- (u_int8_t)lsd_greenValue {
     return (u_int8_t)(CGColorGetComponents(self.CGColor)[1] * 255);
 }
 
-- (u_int8_t)hm_blueValue {
+- (u_int8_t)lsd_blueValue {
     return (u_int8_t)(CGColorGetComponents(self.CGColor)[2] * 255);
 }
 
-- (CGFloat)hm_alphaValue {
+- (CGFloat)lsd_alphaValue {
     return CGColorGetComponents(self.CGColor)[3];
 }
 @end

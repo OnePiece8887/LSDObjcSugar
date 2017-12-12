@@ -10,6 +10,10 @@
 
 @interface UIResponder (LSDObjcSugar)
 
+///通过响应链传值
 - (void)routeEvent:(NSString *)eventName userInfo:(NSDictionary *)userInfo;
+
+///通过响应链获取到指定responderClassName的响应者
+-(UIResponder *)lsd_returnResponderWithResponderClassName:(NSString *)responderClassName;
 
 @end

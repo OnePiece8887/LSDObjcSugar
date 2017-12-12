@@ -10,8 +10,23 @@
 
 @implementation UIButton (LSDObjcSugar)
 
+#pragma mark --普通字符串类型的button
++(UIButton *)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor addTarget:(nullable id)target action:(nonnull SEL)action forControlEvents:(UIControlEvents)controlEvent{
+    
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:textColor forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:fontSize];
+    [btn addTarget:target action:action forControlEvents:controlEvent];
+    
+    return btn;
+    
+}
+
+
 #pragma mark -- 属性字符串类型的button
-+(instancetype)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor
++(UIButton *)lsd_AttributeButtonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor
 {
 
     NSAttributedString *attributedText = [[NSAttributedString alloc]initWithString:title attributes:@{
@@ -20,10 +35,10 @@
                 NSForegroundColorAttributeName : textColor
                 }];
     
-    return [self lsd_buttonWithAttributedText:attributedText imageName:nil backImageName:nil highlightSuffix:nil];
+    return [self lsd_AttributeButtonWithAttributedText:attributedText imageName:nil backImageName:nil highlightSuffix:nil];
 
 }
-+ (instancetype)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
++ (UIButton *)lsd_AttributeButtonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
 {
     
     NSAttributedString *attributedText = [[NSAttributedString alloc]
@@ -31,11 +46,11 @@
                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
                                                        NSForegroundColorAttributeName: textColor}];
     
-    return [self lsd_buttonWithAttributedText:attributedText imageName:imageName backImageName:backImageName highlightSuffix:highlightSuffix];
+    return [self lsd_AttributeButtonWithAttributedText:attributedText imageName:imageName backImageName:backImageName highlightSuffix:highlightSuffix];
 }
 
 
-+ (instancetype)lsd_buttonWithAttributedText:(NSAttributedString *)attributedText imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
++ (UIButton *)lsd_AttributeButtonWithAttributedText:(NSAttributedString *)attributedText imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
 {
     UIButton *button = [[self alloc]init];
     

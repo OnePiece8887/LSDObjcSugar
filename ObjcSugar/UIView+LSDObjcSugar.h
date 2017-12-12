@@ -19,9 +19,6 @@
 +(instancetype)lsd_loadXib;
 
 
-///通过响应链获取到指定responderClassName的响应者
--(UIResponder *)lsd_returnResponderWithResponderClassName:(NSString *)responderClassName;
-
 ///获取当前屏幕显示的viewcontroller
 - (UIViewController *)getCurrentVC;
 

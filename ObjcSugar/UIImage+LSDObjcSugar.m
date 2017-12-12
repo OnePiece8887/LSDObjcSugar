@@ -123,7 +123,7 @@
 /**
  *  返回一张添加水印的图片并保存到document中
  */
-+(instancetype)lsd_waterImageWithBackground:(NSString *)bg logo:(NSString *)logo pathComponent:(NSString *)pathComponent{
++(UIImage *)lsd_waterImageWithBackground:(NSString *)bg logo:(NSString *)logo pathComponent:(NSString *)pathComponent{
     // 1、加载原图
     UIImage *bgImage = [UIImage imageNamed:bg];
     
@@ -159,6 +159,21 @@
     [data writeToFile:path atomically:YES];
     
     return newImage;
+}
+
+//从一个大的图片中 区域截取图片的方法
++(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count{
+    //由于运行设备不同 需要在获取图片的时候获得缩放倍数
+    CGFloat screenScale = [UIScreen mainScreen].scale;
+    //从一个大图片中 区域截取图片的方法
+    UIImage *image = bigImage;
+    
+    CGFloat btnW = image.size.width / count * screenScale;
+    CGFloat btnH = image.size.height * screenScale;
+    CGImageRef clipImage = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(index * btnW , 0, btnW, btnH));
+    
+    return  [UIImage imageWithCGImage:clipImage scale:1.8 orientation:UIImageOrientationUp];
+    
 }
 
 #pragma mark -- 对象方法
@@ -203,20 +218,7 @@
 
 
 
-//从一个大的图片中 区域截取图片的方法
--(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count{
-    //由于运行设备不同 需要在获取图片的时候获得缩放倍数
-    CGFloat screenScale = [UIScreen mainScreen].scale;
-    //从一个大图片中 区域截取图片的方法
-    UIImage *image = bigImage;
-    
-    CGFloat btnW = image.size.width / count * screenScale;
-    CGFloat btnH = image.size.height * screenScale;
-    CGImageRef clipImage = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(index * btnW , 0, btnW, btnH));
-    
-    return  [UIImage imageWithCGImage:clipImage scale:1.8 orientation:UIImageOrientationUp];
-    
-}
+
 
 ///截取部分图像
 -(UIImage *)lsd_getSubImage:(CGRect)rect

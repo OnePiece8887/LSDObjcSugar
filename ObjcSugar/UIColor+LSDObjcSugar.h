@@ -42,12 +42,12 @@
 
 #pragma mark - 颜色值
 /// 返回当前颜色的 red 的 0～255 值
-- (u_int8_t)hm_redValue;
+- (u_int8_t)lsd_redValue;
 /// 返回当前颜色的 green 的 0～255 值
-- (u_int8_t)hm_greenValue ;
+- (u_int8_t)lsd_greenValue ;
 /// 返回当前颜色的 blue 的 0～255 值
-- (u_int8_t)hm_blueValue ;
+- (u_int8_t)lsd_blueValue ;
 /// 返回当前颜色的 alpha 值
-- (CGFloat)hm_alphaValue ;
+- (CGFloat)lsd_alphaValue ;
 
 @end
