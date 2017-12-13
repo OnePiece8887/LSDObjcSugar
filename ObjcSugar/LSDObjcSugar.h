@@ -18,4 +18,4 @@
 #import "MBProgressHUD+LSDObjcSugar.h"
 #import "UITableViewCell+LSDObjcSugar.h"
 #import "UIResponder+LSDObjcSugar.h"
-
+#import "NSObject+AssociatedObject.h"

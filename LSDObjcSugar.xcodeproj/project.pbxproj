@@ -28,6 +28,7 @@
 		EAB2AA9E1FA709280060052F /* UILabel+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA8F1FA709280060052F /* UILabel+LSDObjcSugar.m */; };
 		EAB2AAA01FA709280060052F /* UITableViewCell+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA931FA709280060052F /* UITableViewCell+LSDObjcSugar.m */; };
 		EAB2AAA11FA709280060052F /* UIView+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA951FA709280060052F /* UIView+LSDObjcSugar.m */; };
+		EABF25301FE12655003C4245 /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF252F1FE12655003C4245 /* NSObject+AssociatedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,8 @@
 		EAB2AA931FA709280060052F /* UITableViewCell+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewCell+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		EAB2AA941FA709280060052F /* UIView+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LSDObjcSugar.h"; sourceTree = "<group>"; };
 		EAB2AA951FA709280060052F /* UIView+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSDObjcSugar.m"; sourceTree = "<group>"; };
+		EABF252E1FE12655003C4245 /* NSObject+AssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObject.h"; sourceTree = "<group>"; };
+		EABF252F1FE12655003C4245 /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 				EAB2AA951FA709280060052F /* UIView+LSDObjcSugar.m */,
 				EAB20E7A1FB03CD5004A3C13 /* UIResponder+LSDObjcSugar.h */,
 				EAB20E7B1FB03CD5004A3C13 /* UIResponder+LSDObjcSugar.m */,
+				EABF252E1FE12655003C4245 /* NSObject+AssociatedObject.h */,
+				EABF252F1FE12655003C4245 /* NSObject+AssociatedObject.m */,
 			);
 			path = ObjcSugar;
 			sourceTree = "<group>";
@@ -496,6 +501,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EABF25301FE12655003C4245 /* NSObject+AssociatedObject.m in Sources */,
 				EAB2AA9A1FA709280060052F /* NSString+LSDObjcSugar.m in Sources */,
 				EAB2AA971FA709280060052F /* NSArray+Log.m in Sources */,
 				EAB2AA981FA709280060052F /* NSBundle+LSDObjcSugar.m in Sources */,
