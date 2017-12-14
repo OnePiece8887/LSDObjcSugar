@@ -207,6 +207,15 @@
  */
 - (NSString *)fileSHA512Hash;
 
+//通常用于删除缓存的时，计算缓存大小
+//单个文件的大小
+-(long long)lsd_fileSizeAtPath;
+
+//遍历文件夹获得文件夹大小，返回多少M
+- (float )lsd_folderSizeAtPath;
+
+///清空cache
++(void)lsd_clearCacheFile;
 
 @end
 

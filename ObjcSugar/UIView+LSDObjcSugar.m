@@ -153,4 +153,16 @@
     return self.frame.size.height;
 }
 
+-(void)setSize:(CGSize)size{
+    CGRect rect = self.frame;
+    rect.size = size;
+    self.frame = rect;
+}
+
+-(CGSize)size{
+    
+    return self.frame.size;
+}
+
+
 @end

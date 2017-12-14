@@ -29,6 +29,7 @@
 		EAB2AAA01FA709280060052F /* UITableViewCell+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA931FA709280060052F /* UITableViewCell+LSDObjcSugar.m */; };
 		EAB2AAA11FA709280060052F /* UIView+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EAB2AA951FA709280060052F /* UIView+LSDObjcSugar.m */; };
 		EABF25301FE12655003C4245 /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF252F1FE12655003C4245 /* NSObject+AssociatedObject.m */; };
+		EABF25331FE21633003C4245 /* UIBarButtonItem+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = EABF25321FE21633003C4245 /* UIBarButtonItem+LSDObjcSugar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,8 @@
 		EAB2AA951FA709280060052F /* UIView+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		EABF252E1FE12655003C4245 /* NSObject+AssociatedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObject.h"; sourceTree = "<group>"; };
 		EABF252F1FE12655003C4245 /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
+		EABF25311FE21633003C4245 /* UIBarButtonItem+LSDObjcSugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LSDObjcSugar.h"; sourceTree = "<group>"; };
+		EABF25321FE21633003C4245 /* UIBarButtonItem+LSDObjcSugar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LSDObjcSugar.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +216,8 @@
 				EAB2AA931FA709280060052F /* UITableViewCell+LSDObjcSugar.m */,
 				EAB2AA941FA709280060052F /* UIView+LSDObjcSugar.h */,
 				EAB2AA951FA709280060052F /* UIView+LSDObjcSugar.m */,
+				EABF25311FE21633003C4245 /* UIBarButtonItem+LSDObjcSugar.h */,
+				EABF25321FE21633003C4245 /* UIBarButtonItem+LSDObjcSugar.m */,
 				EAB20E7A1FB03CD5004A3C13 /* UIResponder+LSDObjcSugar.h */,
 				EAB20E7B1FB03CD5004A3C13 /* UIResponder+LSDObjcSugar.m */,
 				EABF252E1FE12655003C4245 /* NSObject+AssociatedObject.h */,
@@ -509,6 +514,7 @@
 				EA6472E51FA6F08A002B1D87 /* ViewController.m in Sources */,
 				EA6472F01FA6F08A002B1D87 /* main.m in Sources */,
 				EAB2AA9E1FA709280060052F /* UILabel+LSDObjcSugar.m in Sources */,
+				EABF25331FE21633003C4245 /* UIBarButtonItem+LSDObjcSugar.m in Sources */,
 				EAB2AA961FA709280060052F /* MBProgressHUD+LSDObjcSugar.m in Sources */,
 				EAB2AA9B1FA709280060052F /* UIButton+LSDObjcSugar.m in Sources */,
 				EA6472E21FA6F08A002B1D87 /* AppDelegate.m in Sources */,

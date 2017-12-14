@@ -14,6 +14,7 @@
 @property (assign, nonatomic) CGFloat y;
 @property (assign, nonatomic) CGFloat w;
 @property (assign, nonatomic) CGFloat h;
+@property(assign,nonatomic)CGSize size;
 
 ///加载xib视图
 +(instancetype)lsd_loadXib;

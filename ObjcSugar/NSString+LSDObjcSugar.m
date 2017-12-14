@@ -300,6 +300,65 @@
     
     return [strM copy];
 }
+
+-(long long)lsd_fileSizeAtPath{
+    
+    NSFileManager* manager = [NSFileManager defaultManager];
+    
+    if ([manager fileExistsAtPath:self]){
+        
+        return [[manager attributesOfItemAtPath:self error:nil] fileSize];
+        
+    }
+    
+    return 0;
+    
+}
+
+-(float)lsd_folderSizeAtPath{
+    
+    NSFileManager* manager = [NSFileManager defaultManager];
+    
+    if (![manager fileExistsAtPath:self]) return 0;
+    
+    NSEnumerator *childFilesEnumerator = [[manager subpathsAtPath:self] objectEnumerator];
+    
+    NSString* fileName;
+    
+    long long folderSize = 0;
+    
+    while ((fileName = [childFilesEnumerator nextObject]) != nil){
+        
+        NSString* fileAbsolutePath = [self stringByAppendingPathComponent:fileName];
+        
+        folderSize += [fileAbsolutePath lsd_fileSizeAtPath];
+        
+    }
+    
+    return folderSize/(1024.0*1024.0);
+}
+
++(void)lsd_clearCacheFile{
+    
+    NSString *cachPath = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory,NSUserDomainMask, YES) lastObject];
+    
+    NSArray *files = [[NSFileManager defaultManager] subpathsAtPath:cachPath];
+    
+    for (NSString *p in files) {
+        
+        NSError *error;
+        
+        NSString *path = [cachPath stringByAppendingPathComponent:p];
+        
+        if ([[NSFileManager defaultManager] fileExistsAtPath:path]) {
+            
+            [[NSFileManager defaultManager] removeItemAtPath:path error:&error];
+            
+        }
+        
+    }
+    
+}
 @end
 
 
