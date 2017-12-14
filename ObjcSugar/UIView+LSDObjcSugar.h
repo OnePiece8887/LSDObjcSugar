@@ -14,6 +14,8 @@
 @property (assign, nonatomic) CGFloat y;
 @property (assign, nonatomic) CGFloat w;
 @property (assign, nonatomic) CGFloat h;
+@property(assign,nonatomic)CGFloat centerX;
+@property(assign,nonatomic)CGFloat centerY;
 @property(assign,nonatomic)CGSize size;
 
 ///加载xib视图
