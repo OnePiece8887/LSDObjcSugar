@@ -176,6 +176,16 @@
     
 }
 
++(UIImage*)imageFromView:(UIView*)view{
+    CGSize size = view.bounds.size;
+    //参数1:表示区域大小 参数2:如果需要显示半透明效果,需要传NO,否则传YES 参数3:屏幕密度
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage*image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 #pragma mark -- 对象方法
 -(void)lsd_clipRoundImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completedBlock:(CompletedBlock)completedBlock{
     
@@ -215,10 +225,6 @@
     
     
 }
-
-
-
-
 
 ///截取部分图像
 -(UIImage *)lsd_getSubImage:(CGRect)rect
