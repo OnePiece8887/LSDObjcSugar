@@ -10,6 +10,7 @@
 		5A5E46CFBCC1CB189C5F8020 /* libPods-LSDObjcSugarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D217CE8CC198AC7F4769F802 /* libPods-LSDObjcSugarTests.a */; };
 		97EB67228C72792FBCD86F4A /* libPods-LSDObjcSugar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E91E8CDA0795AD002BA5A9A5 /* libPods-LSDObjcSugar.a */; };
 		AE8FC6B11FC67CBB363FDEBD /* libPods-LSDObjcSugarUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF86BEFBCBE97E803B7B3E4 /* libPods-LSDObjcSugarUITests.a */; };
+		EA17AC67205BA238003CE29A /* UIViewController+LSDResponder.m in Sources */ = {isa = PBXBuildFile; fileRef = EA17AC65205BA237003CE29A /* UIViewController+LSDResponder.m */; };
 		EA6472E21FA6F08A002B1D87 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6472E11FA6F08A002B1D87 /* AppDelegate.m */; };
 		EA6472E51FA6F08A002B1D87 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA6472E41FA6F08A002B1D87 /* ViewController.m */; };
 		EA6472E81FA6F08A002B1D87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA6472E61FA6F08A002B1D87 /* Main.storyboard */; };
@@ -59,6 +60,8 @@
 		D217CE8CC198AC7F4769F802 /* libPods-LSDObjcSugarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSDObjcSugarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D75B34097D8A507E32800259 /* Pods-LSDObjcSugarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDObjcSugarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSDObjcSugarTests/Pods-LSDObjcSugarTests.release.xcconfig"; sourceTree = "<group>"; };
 		E91E8CDA0795AD002BA5A9A5 /* libPods-LSDObjcSugar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSDObjcSugar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA17AC65205BA237003CE29A /* UIViewController+LSDResponder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LSDResponder.m"; sourceTree = "<group>"; };
+		EA17AC66205BA237003CE29A /* UIViewController+LSDResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LSDResponder.h"; sourceTree = "<group>"; };
 		EA6472DD1FA6F08A002B1D87 /* LSDObjcSugar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LSDObjcSugar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA6472E01FA6F08A002B1D87 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EA6472E11FA6F08A002B1D87 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -222,6 +225,8 @@
 				EAB20E7B1FB03CD5004A3C13 /* UIResponder+LSDObjcSugar.m */,
 				EABF252E1FE12655003C4245 /* NSObject+AssociatedObject.h */,
 				EABF252F1FE12655003C4245 /* NSObject+AssociatedObject.m */,
+				EA17AC66205BA237003CE29A /* UIViewController+LSDResponder.h */,
+				EA17AC65205BA237003CE29A /* UIViewController+LSDResponder.m */,
 			);
 			path = ObjcSugar;
 			sourceTree = "<group>";
@@ -521,6 +526,7 @@
 				EAB2AA9D1FA709280060052F /* UIImage+LSDObjcSugar.m in Sources */,
 				EAB2AAA11FA709280060052F /* UIView+LSDObjcSugar.m in Sources */,
 				EAB2AA9C1FA709280060052F /* UIColor+LSDObjcSugar.m in Sources */,
+				EA17AC67205BA238003CE29A /* UIViewController+LSDResponder.m in Sources */,
 				EAB2AAA01FA709280060052F /* UITableViewCell+LSDObjcSugar.m in Sources */,
 				EAB2AA991FA709280060052F /* NSDate+LSDObjcSugar.m in Sources */,
 			);

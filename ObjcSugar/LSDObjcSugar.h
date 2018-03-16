@@ -20,3 +20,4 @@
 #import "UIResponder+LSDObjcSugar.h"
 #import "NSObject+AssociatedObject.h"
 #import "UIBarButtonItem+LSDObjcSugar.h"
+#import "UIViewController+LSDResponder.h"

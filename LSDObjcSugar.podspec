@@ -16,8 +16,8 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "LSDObjcSugar"
-  s.version      = "1.0.1"
-  s.summary      = "iOS LSDObjcSugar"
+  s.version      = "1.0.2"
+  s.summary      = "iOS开发工具类"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   s.description  = <<-DESC 
-                    a Category For iOS LSDObjcSugar
+                    可以提高开发效率的工具类
                    DESC
 
   s.homepage     = "https://github.com/LSDOnePiece/LSDObjcSugar"
@@ -80,7 +80,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = {:git => "https://github.com/LSDOnePiece/LSDObjcSugar.git", :tag => "1.0.1"}
+  s.source       = {:git => "https://github.com/LSDOnePiece/LSDObjcSugar.git", :tag => "1.0.2"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
