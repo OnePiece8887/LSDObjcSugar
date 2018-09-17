@@ -11,11 +11,12 @@
 @implementation UITableViewCell (LSDObjcSugar)
 +(instancetype)lsd_tableViewCellWithTableView:(UITableView *)tableView{
     
-    NSString *ReusedID = NSStringFromClass(self);
+    NSString *ReusedID = [NSString stringWithFormat:@"%@Xib",NSStringFromClass(self)];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReusedID];
     
     if (cell == nil) {
+        
         cell = [[self alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ReusedID];
     }
     

@@ -13,15 +13,21 @@
 #pragma mark -- 类方法
 +(UIImage *)lsd_singleDotImageWithColor:(UIColor *)color{
 
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(1, 1), YES, 0);
-    
-    [color setFill];
-    UIRectFill(CGRectMake(0, 0, 1, 1));
-    
-    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
+    CGRect rect = CGRectMake(0, 0, 1.0f, 1.0f);
+    // 开启位图上下文
+    UIGraphicsBeginImageContext(rect.size);
+    // 开启上下文
+    CGContextRef ref = UIGraphicsGetCurrentContext();
+    // 使用color演示填充上下文
+    CGContextSetFillColorWithColor(ref, color.CGColor);
+    // 渲染上下文
+    CGContextFillRect(ref, rect);
+    // 从上下文中获取图片
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    // 结束上下文
     UIGraphicsEndImageContext();
     
-    return result;
+    return image;
 
 }
 
@@ -123,7 +129,7 @@
 /**
  *  返回一张添加水印的图片并保存到document中
  */
-+(UIImage *)lsd_waterImageWithBackground:(NSString *)bg logo:(NSString *)logo pathComponent:(NSString *)pathComponent{
++(instancetype)lsd_waterImageWithBackground:(NSString *)bg logo:(NSString *)logo pathComponent:(NSString *)pathComponent{
     // 1、加载原图
     UIImage *bgImage = [UIImage imageNamed:bg];
     
@@ -161,31 +167,6 @@
     return newImage;
 }
 
-//从一个大的图片中 区域截取图片的方法
-+(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count{
-    //由于运行设备不同 需要在获取图片的时候获得缩放倍数
-    CGFloat screenScale = [UIScreen mainScreen].scale;
-    //从一个大图片中 区域截取图片的方法
-    UIImage *image = bigImage;
-    
-    CGFloat btnW = image.size.width / count * screenScale;
-    CGFloat btnH = image.size.height * screenScale;
-    CGImageRef clipImage = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(index * btnW , 0, btnW, btnH));
-    
-    return  [UIImage imageWithCGImage:clipImage scale:1.8 orientation:UIImageOrientationUp];
-    
-}
-
-+(UIImage*)imageFromView:(UIView*)view{
-    CGSize size = view.bounds.size;
-    //参数1:表示区域大小 参数2:如果需要显示半透明效果,需要传NO,否则传YES 参数3:屏幕密度
-    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
-    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
-    UIImage*image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return image;
-}
-
 #pragma mark -- 对象方法
 -(void)lsd_clipRoundImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completedBlock:(CompletedBlock)completedBlock{
     
@@ -219,10 +200,27 @@
             }
         });
         
-        
-        
     });
     
+    
+}
+
+
+
+//从一个大的图片中 区域截取图片的方法
+-(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count{
+    //由于运行设备不同 需要在获取图片的时候获得缩放倍数
+    CGFloat screenScale = [UIScreen mainScreen].scale;
+    //从一个大图片中 区域截取图片的方法
+    UIImage *image = bigImage;
+    
+    CGFloat btnW = image.size.width / count * screenScale;
+    CGFloat btnH = image.size.height * screenScale;
+    CGImageRef clipImage = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(index * btnW , 0, btnW, btnH));
+    UIImage *newImage =  [UIImage imageWithCGImage:clipImage scale:1.8 orientation:UIImageOrientationUp];
+    CFRelease(clipImage);
+    
+    return  newImage;
     
 }
 
@@ -239,7 +237,10 @@
     CGContextDrawImage(context, smallBounds, subImageRef);
     
     UIImage *smallImage = [UIImage imageWithCGImage:subImageRef];
+    
     UIGraphicsEndImageContext();
+    
+    CFRelease(subImageRef);
     
     return  smallImage;
 }

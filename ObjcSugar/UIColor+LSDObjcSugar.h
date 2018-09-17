@@ -33,7 +33,7 @@
 /// @param blue  blue
 ///
 /// @return UIColor
-+(instancetype)lsd_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue;
++(instancetype)lsd_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue alpha:(CGFloat)alpha;
 
 /// 生成随机颜色
 ///
@@ -42,12 +42,12 @@
 
 #pragma mark - 颜色值
 /// 返回当前颜色的 red 的 0～255 值
-- (u_int8_t)lsd_redValue;
+- (u_int8_t)hm_redValue;
 /// 返回当前颜色的 green 的 0～255 值
-- (u_int8_t)lsd_greenValue ;
+- (u_int8_t)hm_greenValue ;
 /// 返回当前颜色的 blue 的 0～255 值
-- (u_int8_t)lsd_blueValue ;
+- (u_int8_t)hm_blueValue ;
 /// 返回当前颜色的 alpha 值
-- (CGFloat)lsd_alphaValue ;
+- (CGFloat)hm_alphaValue ;
 
 @end

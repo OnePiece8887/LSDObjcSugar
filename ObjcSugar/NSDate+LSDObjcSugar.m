@@ -146,16 +146,16 @@ static NSDateFormatter *_dateFormatter;
     int min = (balance - day*3600*24 -sec - hour*3600)/60;
     
     if (day != 0) {
-        [timeString appendFormat:@"%zd天",day];
+        [timeString appendFormat:@"%d天",day];
     }
     if (hour != 0) {
-        [timeString appendFormat:@"%zd小时",hour];
+        [timeString appendFormat:@"%d小时",hour];
     }
     if (min != 0) {
-        [timeString appendFormat:@"%zd分钟",min];
+        [timeString appendFormat:@"%d分钟",min];
     }
     if (sec != 0) {
-        [timeString appendFormat:@"%zd秒",sec];
+        [timeString appendFormat:@"%d秒",sec];
     }
     
     return timeString;

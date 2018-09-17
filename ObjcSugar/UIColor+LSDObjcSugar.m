@@ -62,12 +62,12 @@
     int green = Hex & 0x00FF00 >> 8; //取出绿色
     int blue = Hex & 0x0000FF;//取出蓝色
     
-    return [UIColor lsd_colorWithRed:red green:green blue:blue];
+    return [UIColor lsd_colorWithRed:red green:green blue:blue alpha:1.0];
     
 }
 
-+(instancetype)lsd_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue {
-    return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:1.0];
++(instancetype)lsd_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue alpha:(CGFloat)alpha{
+    return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:alpha];
 }
 
 
@@ -77,25 +77,25 @@
     u_int8_t green = arc4random_uniform(256);
     u_int8_t blue = arc4random_uniform(256);
     
-    return [UIColor lsd_colorWithRed:red green:green blue:blue];
+    return [UIColor lsd_colorWithRed:red green:green blue:blue alpha:1.0];
 
 
 }
 
 #pragma mark - 颜色值
-- (u_int8_t)lsd_redValue {
+- (u_int8_t)hm_redValue {
     return (u_int8_t)(CGColorGetComponents(self.CGColor)[0] * 255);
 }
 
-- (u_int8_t)lsd_greenValue {
+- (u_int8_t)hm_greenValue {
     return (u_int8_t)(CGColorGetComponents(self.CGColor)[1] * 255);
 }
 
-- (u_int8_t)lsd_blueValue {
+- (u_int8_t)hm_blueValue {
     return (u_int8_t)(CGColorGetComponents(self.CGColor)[2] * 255);
 }
 
-- (CGFloat)lsd_alphaValue {
+- (CGFloat)hm_alphaValue {
     return CGColorGetComponents(self.CGColor)[3];
 }
 @end

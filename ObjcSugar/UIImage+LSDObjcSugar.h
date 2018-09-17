@@ -17,7 +17,7 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 ///
 /// @param color 颜色
 ///
-/// @return 1 * 1 图像  纯色图片
+/// @return 1 * 1 图像
 +(UIImage *)lsd_singleDotImageWithColor:(UIColor *)color;
 
 ///裁剪圆形图片的工具方法
@@ -29,21 +29,18 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 /**
  *  返回一张添加水印的图片并保存到document中
  */
-+(UIImage *)lsd_waterImageWithBackground:(NSString *)bg logo:(NSString *)logo pathComponent:(NSString *)pathComponent;
++(instancetype)lsd_waterImageWithBackground:(NSString *)bg logo:(NSString *)logo pathComponent:(NSString *)pathComponent;
 
 ///拉伸图片
 +(UIImage *)lsd_imageStrentchWithImageName:(NSString *)imageName;
-
-///从一个大的图片中 区域截取图片的方法
-+(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count;
-
-///截图一个view
-+(UIImage*)imageFromView:(UIView*)view;
 
 #pragma mark -- 对象方法
 ///图片异步切圆
 -(void)lsd_clipRoundImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completedBlock:(CompletedBlock)completedBlock;
 
+
+///从一个大的图片中 区域截取图片的方法
+-(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count;
 
 ///截取部分图像
 -(UIImage *)lsd_getSubImage:(CGRect)rect;

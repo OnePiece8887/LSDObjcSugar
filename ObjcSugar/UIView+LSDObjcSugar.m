@@ -15,7 +15,6 @@
     NSString *className = NSStringFromClass(self);
     NSString *xibName = [NSString stringWithFormat:@"%@Xib",className];
     return [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
-    
 }
 
 //获取当前屏幕显示的viewcontroller
@@ -61,7 +60,23 @@
 }
 
 
-
+#pragma mark -- 响应者链条
+-(UIResponder *)lsd_returnResponderWithResponderClassName:(NSString *)responderClassName{
+    //取出对象下一个响应者
+    UIResponder * nextResponder = [self nextResponder];
+    
+    //获取用户想获得class
+    Class needClass = NSClassFromString(responderClassName);
+    
+    //遍历视图响应链条 获取下一响应者
+    while (nextResponder != nil) {
+        if ([nextResponder isKindOfClass:needClass]) {
+            return nextResponder;
+        }
+        nextResponder = [nextResponder nextResponder];
+    }
+    return nil;
+}
 
 #pragma mark -- xml输出控件
 - (NSString *)lsd_xmlWithViewComponent
@@ -153,35 +168,60 @@
     return self.frame.size.height;
 }
 
--(void)setSize:(CGSize)size{
-    CGRect rect = self.frame;
-    rect.size = size;
-    self.frame = rect;
+/** 获取最大x */
+- (CGFloat)maxX{
+    return self.x + self.w;
+}
+/** 获取最小x */
+- (CGFloat)minX{
+    return self.x;
 }
 
--(CGSize)size{
-    
-    return self.frame.size;
+/** 获取最大y */
+- (CGFloat)maxY{
+    return self.y + self.h;
+}
+/** 获取最小y */
+- (CGFloat)minY{
+    return self.y;
 }
 
--(void)setCenterX:(CGFloat)centerX{
-    CGPoint center = self.center;
-    center.x = centerX;
-    self.center = center;
+/** 设置最小x,相当于设置x */
+- (void)setMinX:(CGFloat)minX{
+    self.x = minX;
 }
 
--(CGFloat)centerX{
+/** 设置最大x */
+- (void)setMaxX:(CGFloat)maxX{
+    self.x = maxX - self.w;
+}
+
+/** 设置最小y,相当于设置y */
+- (void)setMinY:(CGFloat)minY{
+    self.y = minY;
+}
+
+/** 设置最大y */
+- (void)setMaxY:(CGFloat)maxY{
+    self.y = maxY - self.h;
+}
+
+/** 中心的x坐标 */
+- (CGFloat)centerX{
     return self.center.x;
 }
 
--(void)setCenterY:(CGFloat)centerY{
-    CGPoint center = self.center;
-    center.y = centerY;
-    self.center = center;
+/** 中心的y坐标 */
+- (void)setCenterX:(CGFloat)x{
+    self.center = CGPointMake(x, self.center.y);
 }
 
--(CGFloat)centerY{
+- (CGFloat)centerY{
     return self.center.y;
+}
+
+- (void)setCenterY:(CGFloat)y{
+    self.center = CGPointMake(self.center.x, y);
 }
 
 @end

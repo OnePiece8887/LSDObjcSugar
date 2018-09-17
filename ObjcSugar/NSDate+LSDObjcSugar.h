@@ -37,8 +37,6 @@
 + (NSString*)compareTwoTime:(long long)time1 time2:(long long)time2;
 
 
-
-
 ///显示时间的说明(如果是今天,则显示刚刚等.如果不是今年,返回时间的字符串(年月日))
 /// 返回日期格式字符串
 ///

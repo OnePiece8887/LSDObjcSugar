@@ -10,23 +10,37 @@
 
 @implementation UIButton (LSDObjcSugar)
 
-#pragma mark --普通字符串类型的button
-+(UIButton *)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor addTarget:(nullable id)target action:(nonnull SEL)action forControlEvents:(UIControlEvents)controlEvent{
+#pragma mark --普通类型的button
++ (instancetype)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix{
     
-    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIButton *button = [[self alloc]init];
     
-    [btn setTitle:title forState:UIControlStateNormal];
-    [btn setTitleColor:textColor forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:fontSize];
-    [btn addTarget:target action:action forControlEvents:controlEvent];
+    [button setTitle:title forState:UIControlStateNormal];
+    [button setTitleColor:textColor forState:UIControlStateNormal];
     
-    return btn;
+    if (imageName != nil) {
+        [button setImage:[UIImage imageNamed:imageName] forState:UIControlStateNormal];
+        
+        NSString *highlightedImageName = [imageName stringByAppendingString:highlightSuffix];
+        [button setImage:[UIImage imageNamed:highlightedImageName] forState:UIControlStateHighlighted];
+    }
     
+    if (backImageName != nil) {
+        [button setBackgroundImage:[UIImage imageNamed:backImageName] forState:UIControlStateNormal];
+        
+        NSString *highlightedImageName = [backImageName stringByAppendingString:highlightSuffix];
+        [button setBackgroundImage:[UIImage imageNamed:highlightedImageName] forState:UIControlStateHighlighted];
+        
+    }
+    [button sizeToFit];
+    
+    return button;
 }
 
 
+
 #pragma mark -- 属性字符串类型的button
-+(UIButton *)lsd_AttributeButtonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor
++(instancetype)lsd_buttonWithAttributedText:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor
 {
 
     NSAttributedString *attributedText = [[NSAttributedString alloc]initWithString:title attributes:@{
@@ -35,10 +49,10 @@
                 NSForegroundColorAttributeName : textColor
                 }];
     
-    return [self lsd_AttributeButtonWithAttributedText:attributedText imageName:nil backImageName:nil highlightSuffix:nil];
+    return [self lsd_buttonWithAttributedText:attributedText imageName:nil backImageName:nil highlightSuffix:nil];
 
 }
-+ (UIButton *)lsd_AttributeButtonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
++ (instancetype)lsd_buttonWithAttributedText:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
 {
     
     NSAttributedString *attributedText = [[NSAttributedString alloc]
@@ -46,11 +60,11 @@
                                           attributes:@{NSFontAttributeName: [UIFont systemFontOfSize:fontSize],
                                                        NSForegroundColorAttributeName: textColor}];
     
-    return [self lsd_AttributeButtonWithAttributedText:attributedText imageName:imageName backImageName:backImageName highlightSuffix:highlightSuffix];
+    return [self lsd_buttonWithAttributedText:attributedText imageName:imageName backImageName:backImageName highlightSuffix:highlightSuffix];
 }
 
 
-+ (UIButton *)lsd_AttributeButtonWithAttributedText:(NSAttributedString *)attributedText imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
++ (instancetype)lsd_buttonWithAttributedText:(NSAttributedString *)attributedText imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix
 {
     UIButton *button = [[self alloc]init];
     

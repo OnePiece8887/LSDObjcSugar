@@ -1,42 +1,50 @@
 //
 //  UIBarButtonItem+LSDObjcSugar.m
-//  LSDObjcSugar
+//  SwiftBaseProject
 //
-//  Created by 神州锐达 on 2017/12/14.
-//  Copyright © 2017年 onePiece. All rights reserved.
+//  Created by 神州锐达 on 2018/9/17.
+//  Copyright © 2018年 onePiece. All rights reserved.
 //
 
 #import "UIBarButtonItem+LSDObjcSugar.h"
-#import "UIView+LSDObjcSugar.h"
+
 @implementation UIBarButtonItem (LSDObjcSugar)
 
-+ (instancetype)lsd_itemWithImage:(NSString *)image hightLImage:(NSString *)hightLImage target:(id)target action:(SEL)action
-{
++(instancetype)itemWithTitle:(NSString *)title titleColor:(UIColor *)titleColor font:(UIFont *)font action:(SEL)action{
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setBackgroundImage:[UIImage imageNamed:image] forState:UIControlStateNormal];
-    [button setBackgroundImage:[UIImage imageNamed:hightLImage] forState:UIControlStateHighlighted];
-    button.size = button.currentBackgroundImage.size;
-    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    [button sizeToFit];
-    return [[self alloc] initWithCustomView:button];
+    UIButton *titleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     
-}
-
-+ (instancetype)lsd_itemWithTitle:(NSString *)title titleColor:(UIColor *)titleColor target:(id)target action:(SEL)action
-{
+    [titleBtn setTitle:title forState:UIControlStateNormal];
     
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-    [button setTitle:title forState:UIControlStateNormal];
-    [button setTitleColor:titleColor forState:UIControlStateNormal];
-    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    [titleBtn setTitleColor:titleColor forState:UIControlStateNormal];
+    titleBtn.titleLabel.font = font;
     
-    [button sizeToFit];
+    [titleBtn sizeToFit];
+    [titleBtn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
     
-    return [[self alloc] initWithCustomView:button];
+    UIBarButtonItem *titleItem = [[UIBarButtonItem alloc]initWithCustomView:titleBtn];
+    
+    return titleItem;
     
 }
 
++(instancetype)itemWithImage:(NSString *)image action:(SEL)action{
+   
+    UIImage *icon = [UIImage imageNamed:image];
+    UIImage *iconImage = [icon imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    
+    UIButton *imageBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [imageBtn setImage:iconImage forState:UIControlStateNormal];
+    
+    imageBtn.frame = CGRectMake(0, 0, iconImage.size.width + 15, iconImage.size.height + 15);
+    
+    [imageBtn addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
+    
+    UIBarButtonItem *imageItem = [[UIBarButtonItem alloc]initWithCustomView:imageBtn];
+    
+    return imageItem;
+}
 
 
 @end

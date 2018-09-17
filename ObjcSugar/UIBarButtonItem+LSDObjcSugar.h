@@ -1,17 +1,17 @@
 //
 //  UIBarButtonItem+LSDObjcSugar.h
-//  LSDObjcSugar
+//  SwiftBaseProject
 //
-//  Created by 神州锐达 on 2017/12/14.
-//  Copyright © 2017年 onePiece. All rights reserved.
+//  Created by 神州锐达 on 2018/9/17.
+//  Copyright © 2018年 onePiece. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
 @interface UIBarButtonItem (LSDObjcSugar)
-
-+ (instancetype)lsd_itemWithImage:(NSString *)image hightLImage:(NSString *)hightLImage target:(id)target action:(SEL)action;
-
-+ (instancetype)lsd_itemWithTitle:(NSString *)title titleColor:(UIColor *)titleColor target:(id)target action:(SEL)action;
+//文本
++(instancetype)itemWithTitle:(NSString *)title titleColor:(UIColor *)titleColor font:(UIFont *)font action:(SEL)action;
+//图片
++(instancetype)itemWithImage:(NSString *)image action:(nullable SEL)action;
 
 @end
