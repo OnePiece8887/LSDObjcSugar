@@ -38,6 +38,9 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 ///图片异步切圆
 -(void)lsd_clipRoundImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completedBlock:(CompletedBlock)completedBlock;
 
+//切圆
+-(UIImage *)lsd_cornerImage:(CGSize) size fillColor:(UIColor *)fillColor;
+
 
 ///从一个大的图片中 区域截取图片的方法
 -(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count;

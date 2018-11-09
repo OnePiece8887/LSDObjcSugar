@@ -13,7 +13,7 @@
 +(instancetype)lsd_loadXib{
     
     NSString *className = NSStringFromClass(self);
-    NSString *xibName = [NSString stringWithFormat:@"%@Xib",className];
+    NSString *xibName = [NSString stringWithFormat:@"%@",className];
     return [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
 }
 
@@ -144,33 +144,33 @@
     return self.frame.origin.y;
 }
 
-- (void)setW:(CGFloat)w
+- (void)setWidth:(CGFloat)width
 {
     CGRect rect = self.frame;
-    rect.size.width = w;
+    rect.size.width = width;
     self.frame = rect;
 }
 
-- (CGFloat)w
+- (CGFloat)width
 {
     return self.frame.size.width;
 }
 
-- (void)setH:(CGFloat)h
+- (void)setHeight:(CGFloat)height
 {
     CGRect rect = self.frame;
-    rect.size.height = h;
+    rect.size.height = height;
     self.frame = rect;
 }
 
-- (CGFloat)h
+- (CGFloat)height
 {
     return self.frame.size.height;
 }
 
 /** 获取最大x */
 - (CGFloat)maxX{
-    return self.x + self.w;
+    return self.x + self.width;
 }
 /** 获取最小x */
 - (CGFloat)minX{
@@ -179,7 +179,7 @@
 
 /** 获取最大y */
 - (CGFloat)maxY{
-    return self.y + self.h;
+    return self.y + self.height;
 }
 /** 获取最小y */
 - (CGFloat)minY{
@@ -193,7 +193,7 @@
 
 /** 设置最大x */
 - (void)setMaxX:(CGFloat)maxX{
-    self.x = maxX - self.w;
+    self.x = maxX - self.width;
 }
 
 /** 设置最小y,相当于设置y */
@@ -203,7 +203,7 @@
 
 /** 设置最大y */
 - (void)setMaxY:(CGFloat)maxY{
-    self.y = maxY - self.h;
+    self.y = maxY - self.height;
 }
 
 /** 中心的x坐标 */

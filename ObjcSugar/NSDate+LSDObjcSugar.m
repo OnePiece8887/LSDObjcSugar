@@ -136,26 +136,26 @@ static NSDateFormatter *_dateFormatter;
 + (NSString*)compareTwoTime:(long long)time1 time2:(long long)time2
 {
     
-    long long balance = (long long)(time2 - time1) ;
+    int balance = (int)(time2 - time1) ;
     
     NSMutableString *timeString = [[NSMutableString alloc]init];
     
-    long long sec = balance%60;
-    long long day = balance/60/60/24;
-    long long hour = (balance - day*3600*24 - sec)/60/60;
-    long long min = (balance - day*3600*24 -sec - hour*3600)/60;
+    int sec = balance%60;
+    int day = balance/60/60/24;
+    int hour = (balance - day*3600*24 - sec)/60/60;
+    int min = (balance - day*3600*24 -sec - hour*3600)/60;
     
     if (day != 0) {
-        [timeString appendFormat:@"%lld天",day];
+        [timeString appendFormat:@"%d天",day];
     }
     if (hour != 0) {
-        [timeString appendFormat:@"%lld小时",hour];
+        [timeString appendFormat:@"%d小时",hour];
     }
     if (min != 0) {
-        [timeString appendFormat:@"%lld分钟",min];
+        [timeString appendFormat:@"%d分钟",min];
     }
     if (sec != 0) {
-        [timeString appendFormat:@"%lld秒",sec];
+        [timeString appendFormat:@"%d秒",sec];
     }
     
     return timeString;
