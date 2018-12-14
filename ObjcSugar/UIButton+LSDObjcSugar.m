@@ -11,7 +11,7 @@
 @implementation UIButton (LSDObjcSugar)
 
 #pragma mark --普通类型的button
-+ (instancetype)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix{
++ (instancetype)lsd_buttonWithTitle:(NSString *)title fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor backgroundColor:(UIColor *)backgroundColor imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix{
     
     UIButton *button = [[self alloc]init];
     
@@ -32,6 +32,13 @@
         [button setBackgroundImage:[UIImage imageNamed:highlightedImageName] forState:UIControlStateHighlighted];
         
     }
+    
+    if (backgroundColor != nil) {
+        [button setBackgroundColor:backgroundColor];
+    }else{
+         [button setBackgroundColor:[UIColor whiteColor]];
+    }
+    
     [button sizeToFit];
     
     return button;

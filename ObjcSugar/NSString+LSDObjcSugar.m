@@ -40,6 +40,15 @@
     return [attString copy];
 }
 
+
+-(NSString *)lsd_URLEncodedString{
+    
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8));
+#pragma clang diagnostic pop
+}
+
 @end
 
 

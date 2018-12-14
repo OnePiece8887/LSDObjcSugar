@@ -29,6 +29,10 @@
 +(NSAttributedString *)lsd_stringWithAttribute:(NSString *)string andSelectedRange:(NSRange)selectedRange andFontSize:(CGFloat)fontSize andColor:(UIColor *)color;
 
 
+//中文编码处理
+-(NSString *)lsd_URLEncodedString;
+
+
 @end
 
 #pragma mark -- 内存缓存路径

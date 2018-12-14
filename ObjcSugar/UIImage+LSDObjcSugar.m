@@ -26,7 +26,6 @@
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     // 结束上下文
     UIGraphicsEndImageContext();
-    
     return image;
 
 }
@@ -201,30 +200,8 @@
         });
         
     });
-}
-
--(UIImage *)lsd_cornerImage:(CGSize) size fillColor:(UIColor *)fillColor{
-    ///开启图像的上下文
-    UIGraphicsBeginImageContextWithOptions(size, YES, 0);
     
-    CGRect rect = CGRectMake(0, 0, size.width, size.height);
-    ///填充颜色
-    [fillColor setFill];
-    UIRectFill(rect);
-    ///通过贝塞尔曲线来绘制路线
-    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:rect];
-    ///贝塞尔切圆操作
-    [path addClip];
     
-    ///将图片绘制到一个rect中
-    [self drawInRect:rect];
-    
-    ///从当前图像上下文中获取到图片
-    UIImage *result = UIGraphicsGetImageFromCurrentImageContext();
-    ///关闭图形上下文
-    UIGraphicsEndImageContext();
-    
-    return result;
 }
 
 
@@ -353,7 +330,7 @@
 
 
 //压缩图片
-+ (UIImage*)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize
++ (UIImage*)lsd_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize
 {
     // Create a graphics image context
     UIGraphicsBeginImageContext(newSize);
@@ -383,7 +360,7 @@
  *
  *  @return 新的image
  */
-+ (UIImage *) createNewImageWithColor:(UIImage *)image multiple:(CGFloat)multiple
++ (UIImage *)lsd_createNewImageWithColor:(UIImage *)image multiple:(CGFloat)multiple
 {
     CGFloat newMultiple = multiple;
     if (multiple == 0) {

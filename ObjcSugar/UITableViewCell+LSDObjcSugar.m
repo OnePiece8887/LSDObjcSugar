@@ -11,14 +11,9 @@
 @implementation UITableViewCell (LSDObjcSugar)
 +(instancetype)lsd_tableViewCellWithTableView:(UITableView *)tableView{
     
-    NSString *ReusedID = [NSString stringWithFormat:@"%@Xib",NSStringFromClass(self)];
+    NSString *ReusedID = [NSString stringWithFormat:@"%@",NSStringFromClass(self)];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ReusedID];
-    
-    if (cell == nil) {
-        
-        cell = [[self alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ReusedID];
-    }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     

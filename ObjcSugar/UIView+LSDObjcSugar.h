@@ -38,5 +38,6 @@
 ///xml输出控件(调试用)
 - (NSString *)lsd_xmlWithViewComponent;
 
-
+#pragma mark --设置边框
+-(void)lsd_cornerRadius:(CGFloat)cornerRadius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth;
 @end

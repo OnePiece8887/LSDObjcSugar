@@ -62,12 +62,12 @@
     int green = Hex & 0x00FF00 >> 8; //取出绿色
     int blue = Hex & 0x0000FF;//取出蓝色
     
-    return [UIColor lsd_colorWithRed:red green:green blue:blue alpha:1.0];
+    return [UIColor lsd_colorWithRed:red green:green blue:blue];
     
 }
 
-+(instancetype)lsd_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue alpha:(CGFloat)alpha{
-    return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:alpha];
++(instancetype)lsd_colorWithRed:(u_int8_t)red green:(u_int8_t)green blue:(u_int8_t)blue {
+    return [UIColor colorWithRed:red / 255.0 green:green / 255.0 blue:blue / 255.0 alpha:1.0];
 }
 
 
@@ -77,7 +77,7 @@
     u_int8_t green = arc4random_uniform(256);
     u_int8_t blue = arc4random_uniform(256);
     
-    return [UIColor lsd_colorWithRed:red green:green blue:blue alpha:1.0];
+    return [UIColor lsd_colorWithRed:red green:green blue:blue];
 
 
 }
@@ -98,4 +98,30 @@
 - (CGFloat)hm_alphaValue {
     return CGColorGetComponents(self.CGColor)[3];
 }
+
+
+// 获取RGB和Alpha
+-(NSArray *)lsd_getRGBWithColor:(UIColor *)color{
+    CGFloat red = 0.0;
+    CGFloat green = 0.0;
+    CGFloat blue = 0.0;
+    CGFloat alpha = 0.0;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    return @[@(red), @(green), @(blue), @(alpha)];
+}
+
+
+
+// 改变UIColor的Alpha
++(UIColor *)lsd_getNewColorWith:(UIColor *)color alpha:(CGFloat)alpha{
+    CGFloat red = 0.0;
+    CGFloat green = 0.0;
+    CGFloat blue = 0.0;
+    [color getRed:&red green:&green blue:&blue alpha:nil];
+    UIColor *newColor = [UIColor colorWithRed:red green:green blue:blue alpha:alpha];
+    return newColor;
+}
+
+
+
 @end

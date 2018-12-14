@@ -13,7 +13,7 @@
 +(instancetype)lsd_loadXib{
     
     NSString *className = NSStringFromClass(self);
-    NSString *xibName = [NSString stringWithFormat:@"%@",className];
+    NSString *xibName = [NSString stringWithFormat:@"%@Xib",className];
     return [[[NSBundle mainBundle] loadNibNamed:xibName owner:nil options:nil] lastObject];
 }
 
@@ -223,5 +223,20 @@
 - (void)setCenterY:(CGFloat)y{
     self.center = CGPointMake(self.center.x, y);
 }
+
+#pragma mark --设置边框
+-(void)lsd_cornerRadius:(CGFloat)cornerRadius borderColor:(UIColor *)borderColor borderWidth:(CGFloat)borderWidth{
+    
+    if (borderColor != nil) {
+        self.layer.borderColor = borderColor.CGColor;
+    }
+    if (borderWidth != 0) {
+        self.layer.borderWidth = borderWidth;
+    }
+    self.layer.cornerRadius = cornerRadius;
+    self.layer.masksToBounds = YES;
+
+}
+
 
 @end

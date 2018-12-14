@@ -38,9 +38,6 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 ///图片异步切圆
 -(void)lsd_clipRoundImageWithSize:(CGSize)size fillColor:(UIColor *)fillColor completedBlock:(CompletedBlock)completedBlock;
 
-//切圆
--(UIImage *)lsd_cornerImage:(CGSize) size fillColor:(UIColor *)fillColor;
-
 
 ///从一个大的图片中 区域截取图片的方法
 -(UIImage *)lsd_clipImageWithBigImage:(UIImage *)bigImage andIndex:(NSInteger)index andSmallImageCount:(NSInteger)count;
@@ -54,7 +51,7 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 +(UIImage*)lsd_fixOrientation:(UIImage*)aImage;
 
 //压缩图片
-+ (UIImage*)imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize;
++ (UIImage*)lsd_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize;
 
 
 //图片放大或压缩处理 ，图片放大倍数 0 ~ 2 之间 ，0~1 缩小图片，1~2 放大图片
@@ -66,6 +63,6 @@ typedef void(^CompletedBlock)(UIImage *newImage);
  *
  *  @return 新的image
  */
-+ (UIImage *)createNewImageWithColor:(UIImage *)image multiple:(CGFloat)multiple;
++ (UIImage *)lsd_createNewImageWithColor:(UIImage *)image multiple:(CGFloat)multiple;
 
 @end
