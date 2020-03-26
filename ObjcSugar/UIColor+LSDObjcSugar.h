@@ -40,8 +40,6 @@
 /// @return UIColor
 +(instancetype)lsd_randomColor;
 
-/// 获取RGB和Alpha
-+(NSArray *)lsd_getRGBWithColor:(UIColor *)color;
 /// 改变UIColor的Alpha
 +(UIColor *)lsd_getNewColorWith:(UIColor *)color alpha:(CGFloat)alpha;
 

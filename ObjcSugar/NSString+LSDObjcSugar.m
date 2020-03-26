@@ -16,7 +16,11 @@
     //获取文字字符串
     NSString *titleString = String;
     //设置文字的属性
-    NSDictionary *stringAttribute = @{NSFontAttributeName : [UIFont systemFontOfSize:fontSize]};
+    NSDictionary *stringAttribute = @{
+                                      NSFontAttributeName : [UIFont systemFontOfSize:fontSize],
+                                      
+                                      
+                                      };
     //获取文字的bounds
     CGRect bound =  [titleString boundingRectWithSize:rectSize options:NSStringDrawingUsesLineFragmentOrigin attributes:stringAttribute context:nil];
     //返回文字的bounds
@@ -43,10 +47,14 @@
 
 -(NSString *)lsd_URLEncodedString{
     
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored"-Wdeprecated-declarations"
-    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8));
-#pragma clang diagnostic pop
+//#pragma clang diagnostic push
+//#pragma clang diagnostic ignored"-Wdeprecated-declarations"
+//    return (NSString *)CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault, (CFStringRef)self, (CFStringRef)@"!$&'()*+,-./:;=?@_~%#[]", NULL,kCFStringEncodingUTF8));
+//#pragma clang diagnostic pop
+       NSString *charactersToEscape =@"`#%^(){}\"*+-[]|\\<> ";
+       NSCharacterSet *allowedCharacters = [[NSCharacterSet characterSetWithCharactersInString:charactersToEscape] invertedSet];
+       NSString *encodedUrl = [self stringByAddingPercentEncodingWithAllowedCharacters:allowedCharacters];
+       return encodedUrl;
 }
 
 @end

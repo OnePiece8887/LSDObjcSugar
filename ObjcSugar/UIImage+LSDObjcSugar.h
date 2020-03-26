@@ -20,6 +20,8 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 /// @return 1 * 1 图像
 +(UIImage *)lsd_singleDotImageWithColor:(UIColor *)color;
 
++ (UIImage *)lsd_imageWithColor:(UIColor *)color size:(CGSize)size isRound:(BOOL)isRound;
+
 ///裁剪圆形图片的工具方法
 +(UIImage *)lsd_imageClipWithImageName:(NSString *)imageName andBoardMargin:(CGFloat)BoardMargin andBackgroundColor:(UIColor *)color;
 

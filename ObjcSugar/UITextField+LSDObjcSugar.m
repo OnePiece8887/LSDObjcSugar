@@ -13,9 +13,11 @@
 -(void)lsd_leftViewMargin:(CGFloat)leftViewMargin image:(UIImage *)image{
     
     if (image) {
-        UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, leftViewMargin, self.bounds.size.height)];
+        UIView *leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, leftViewMargin, self.bounds.size.height)];
+        UIImageView *imageView = [[UIImageView alloc]initWithFrame:leftView.bounds];
+        [leftView addSubview:imageView];
         imageView.image = image;
-        self.leftView = imageView;
+        self.leftView = leftView;
         imageView.contentMode = UIViewContentModeCenter;
     }else{
         self.leftView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, leftViewMargin, 0)];
