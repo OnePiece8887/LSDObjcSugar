@@ -20,6 +20,11 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 /// @return 1 * 1 图像
 +(UIImage *)lsd_singleDotImageWithColor:(UIColor *)color;
 
+
+/// 生成指定颜色和尺寸的的图像
+/// @param color 颜色
+/// @param size 指定尺寸
+/// @param isRound 是否切圆
 + (UIImage *)lsd_imageWithColor:(UIColor *)color size:(CGSize)size isRound:(BOOL)isRound;
 
 ///裁剪圆形图片的工具方法
@@ -52,19 +57,18 @@ typedef void(^CompletedBlock)(UIImage *newImage);
 ///修正方向(人脸识别中使用)
 +(UIImage*)lsd_fixOrientation:(UIImage*)aImage;
 
-//压缩图片
+
+#pragma mark --压缩图片尺寸和质量
+/// 等比例压缩图片 同时压缩图片质量
+/// @param image 原图片
+/// @param width 指定图片宽度
++ (UIImage *)lsd_imageWithImageSimple:(UIImage *)image scaledToWidth:(CGFloat)width;
+
+/// 压缩图片到指定尺寸 同时压缩图片质量
+/// @param image 原图片
+/// @param newSize 指定尺寸
 + (UIImage*)lsd_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize;
 
 
-//图片放大或压缩处理 ，图片放大倍数 0 ~ 2 之间 ，0~1 缩小图片，1~2 放大图片
-/**
- *  根据image 返回放大或缩小之后的图片
- *
- *  @param image    原始图片
- *  @param multiple 放大倍数 0 ~ 2 之间
- *
- *  @return 新的image
- */
-+ (UIImage *)lsd_createNewImageWithColor:(UIImage *)image multiple:(CGFloat)multiple;
 
 @end

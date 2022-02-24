@@ -356,9 +356,15 @@
 }
 
 
-//压缩图片
-+ (UIImage*)lsd_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize
+///压缩图片到指定尺寸
++ (UIImage *)lsd_imageWithImageSimple:(UIImage *)image scaledToWidth:(CGFloat)width
 {
+    
+     CGFloat rate = image.size.width / image.size.height;
+     CGFloat height = width / rate;
+    
+    CGSize newSize = CGSizeMake(width, height);
+    
     // Create a graphics image context
     UIGraphicsBeginImageContext(newSize);
     
@@ -372,48 +378,62 @@
     // End the context
     UIGraphicsEndImageContext();
     
+    //进行图像的画面质量压缩
+    NSData *data=UIImageJPEGRepresentation(newImage, 1.0);
+    if (data.length>100*1024) {
+        if (data.length>1024*1024) {//1M以及以上
+            data=UIImageJPEGRepresentation(newImage, 0.7);
+        }else if (data.length>512*1024) {//0.5M-1M
+            data=UIImageJPEGRepresentation(newImage, 0.8);
+        }else if (data.length>200*1024) {
+            //0.25M-0.5M
+            data=UIImageJPEGRepresentation(newImage, 0.9);
+        }
+    }
+
+    newImage = [UIImage imageWithData:data];
+    
     // Return the new image.
     return newImage;
 }
 
 
+/// 压缩图片到指定尺寸 同时压缩图片质量
+/// @param image 原图片
+/// @param newSize 指定尺寸
++ (UIImage*)lsd_imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize)newSize{
+    
+   // Create a graphics image context
+   UIGraphicsBeginImageContext(newSize);
+   
+   // Tell the old image to draw in this new context, with the desired
+   // new size
+   [image drawInRect:CGRectMake(0,0,newSize.width,newSize.height)];
+   
+   // Get the new image from the context
+   UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
+   
+   // End the context
+   UIGraphicsEndImageContext();
+   
+   //进行图像的画面质量压缩
+   NSData *data=UIImageJPEGRepresentation(newImage, 1.0);
+   if (data.length>100*1024) {
+       if (data.length>1024*1024) {//1M以及以上
+           data=UIImageJPEGRepresentation(newImage, 0.7);
+       }else if (data.length>512*1024) {//0.5M-1M
+           data=UIImageJPEGRepresentation(newImage, 0.8);
+       }else if (data.length>200*1024) {
+           //0.25M-0.5M
+           data=UIImageJPEGRepresentation(newImage, 0.9);
+       }
+   }
 
-//图片放大或压缩处理 ，图片放大倍数 0 ~ 2 之间 ，0~1 缩小图片，1~2 放大图片
-/**
- *  根据image 返回放大或缩小之后的图片
- *
- *  @param image    原始图片
- *  @param multiple 放大倍数 0 ~ 2 之间
- *
- *  @return 新的image
- */
-+ (UIImage *)lsd_createNewImageWithColor:(UIImage *)image multiple:(CGFloat)multiple
-{
-    CGFloat newMultiple = multiple;
-    if (multiple == 0) {
-        newMultiple = 1;
-    }
-    else if((fabs(multiple) > 0 && fabs(multiple) < 1) || (fabs(multiple)>1 && fabs(multiple)<2))
-    {
-        newMultiple = multiple;
-    }
-    else
-    {
-        newMultiple = 1;
-    }
-    CGFloat w = image.size.width*newMultiple;
-    CGFloat h = image.size.height*newMultiple;
-    CGFloat scale = [UIScreen mainScreen].scale;
-    UIImage *tempImage = nil;
-    CGRect imageFrame = CGRectMake(0, 0, w, h);
-    UIGraphicsBeginImageContextWithOptions(image.size, NO, scale);
-    [[UIBezierPath bezierPathWithRoundedRect:imageFrame cornerRadius:0] addClip];
-    [image drawInRect:imageFrame];
-    tempImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    return tempImage;
+   newImage = [UIImage imageWithData:data];
+   
+   // Return the new image.
+   return newImage;
 }
-
 
 @end
 

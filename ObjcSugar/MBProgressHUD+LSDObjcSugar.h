@@ -10,12 +10,17 @@
 
 @interface MBProgressHUD (LSDObjcSugar)
 
-/**
- 提示框
- @param message 信息
- @return 提示框
- */
+
+/// 提示框
+/// @param message 提示信息
 + (MBProgressHUD *)lsd_showMessag:(NSString *)message;
 
+///  提示框
+/// @param message 提示信息
+/// @param textColor 字体颜色
+/// @param font 字体大小
+/// @param margin 间隔
+/// @param offset 偏移量
++ (MBProgressHUD *)lsd_showMessag:(NSString *)message textColor:(UIColor *)textColor font:(UIFont *)font margin:(CGFloat)margin offset:(CGPoint)offset;
 
 @end
