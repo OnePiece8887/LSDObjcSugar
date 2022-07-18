@@ -105,7 +105,7 @@
 
 +(UIImage *)lsd_imageClipScreenWithView:(UIView *)clipView{
     //开启位图上下文
-    UIGraphicsBeginImageContext(clipView.frame.size);
+    UIGraphicsBeginImageContextWithOptions(clipView.frame.size, YES, 0.0);
     //获取当前的图形上下文
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     //截屏
