@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/LSDOnePiece/LSDObjcSugar"
   s.license      = "MIT"
-  s.author             = { "liushuai" => "liushuai8887@126.com" }
+  s.author       = { "liushuai" => "liushuai8887@126.com" }
  
   s.platform     = :ios, "8.0"
   s.ios.deployment_target = "8.0"
