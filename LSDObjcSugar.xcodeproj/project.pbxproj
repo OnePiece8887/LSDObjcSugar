@@ -11,7 +11,6 @@
 		1F45B253242C4C91006F0912 /* UIView+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45B236242C4C90006F0912 /* UIView+LSDObjcSugar.m */; };
 		1F45B254242C4C91006F0912 /* UILabel+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45B239242C4C90006F0912 /* UILabel+LSDObjcSugar.m */; };
 		1F45B255242C4C91006F0912 /* UIImage+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45B23A242C4C90006F0912 /* UIImage+LSDObjcSugar.m */; };
-		1F45B256242C4C91006F0912 /* MBProgressHUD+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45B23D242C4C90006F0912 /* MBProgressHUD+LSDObjcSugar.m */; };
 		1F45B257242C4C91006F0912 /* NSBundle+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45B23F242C4C90006F0912 /* NSBundle+LSDObjcSugar.m */; };
 		1F45B258242C4C91006F0912 /* NSString+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45B241242C4C90006F0912 /* NSString+LSDObjcSugar.m */; };
 		1F45B259242C4C91006F0912 /* NSDictionary+LSDObjcSugar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F45B246242C4C90006F0912 /* NSDictionary+LSDObjcSugar.m */; };
@@ -58,7 +57,6 @@
 		1F45B23A242C4C90006F0912 /* UIImage+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		1F45B23B242C4C90006F0912 /* NSString+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+LSDObjcSugar.h"; sourceTree = "<group>"; };
 		1F45B23C242C4C90006F0912 /* NSArray+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+LSDObjcSugar.h"; sourceTree = "<group>"; };
-		1F45B23D242C4C90006F0912 /* MBProgressHUD+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		1F45B23E242C4C90006F0912 /* UIFont+LSDObjcSuger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+LSDObjcSuger.h"; sourceTree = "<group>"; };
 		1F45B23F242C4C90006F0912 /* NSBundle+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		1F45B240242C4C90006F0912 /* NSDictionary+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+LSDObjcSugar.h"; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 		1F45B24A242C4C91006F0912 /* NSDate+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LSDObjcSugar.h"; sourceTree = "<group>"; };
 		1F45B24B242C4C91006F0912 /* UIColor+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+LSDObjcSugar.h"; sourceTree = "<group>"; };
 		1F45B24C242C4C91006F0912 /* UITableViewCell+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewCell+LSDObjcSugar.h"; sourceTree = "<group>"; };
-		1F45B24D242C4C91006F0912 /* MBProgressHUD+LSDObjcSugar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+LSDObjcSugar.h"; sourceTree = "<group>"; };
 		1F45B24E242C4C91006F0912 /* UIColor+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		1F45B24F242C4C91006F0912 /* UITextField+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+LSDObjcSugar.m"; sourceTree = "<group>"; };
 		1F45B250242C4C91006F0912 /* UIButton+LSDObjcSugar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+LSDObjcSugar.m"; sourceTree = "<group>"; };
@@ -194,8 +191,6 @@
 			isa = PBXGroup;
 			children = (
 				1F45B237242C4C90006F0912 /* LSDObjcSugar.h */,
-				1F45B24D242C4C91006F0912 /* MBProgressHUD+LSDObjcSugar.h */,
-				1F45B23D242C4C90006F0912 /* MBProgressHUD+LSDObjcSugar.m */,
 				1F45B23C242C4C90006F0912 /* NSArray+LSDObjcSugar.h */,
 				1F45B235242C4C90006F0912 /* NSArray+LSDObjcSugar.m */,
 				1F45B245242C4C90006F0912 /* NSBundle+LSDObjcSugar.h */,
@@ -423,7 +418,6 @@
 				1F45B259242C4C91006F0912 /* NSDictionary+LSDObjcSugar.m in Sources */,
 				1F45B253242C4C91006F0912 /* UIView+LSDObjcSugar.m in Sources */,
 				1F45B258242C4C91006F0912 /* NSString+LSDObjcSugar.m in Sources */,
-				1F45B256242C4C91006F0912 /* MBProgressHUD+LSDObjcSugar.m in Sources */,
 				EA6472F01FA6F08A002B1D87 /* main.m in Sources */,
 				EA6472E21FA6F08A002B1D87 /* AppDelegate.m in Sources */,
 				1F45B255242C4C91006F0912 /* UIImage+LSDObjcSugar.m in Sources */,

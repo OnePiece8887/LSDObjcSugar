@@ -14,7 +14,6 @@
 #import "UIImage+LSDObjcSugar.h"
 #import "UILabel+LSDObjcSugar.h"
 #import "UIView+LSDObjcSugar.h"
-#import "MBProgressHUD+LSDObjcSugar.h"
 #import "UITableViewCell+LSDObjcSugar.h"
 #import "UIFont+LSDObjcSuger.h"
 #import "UITextField+LSDObjcSugar.h"

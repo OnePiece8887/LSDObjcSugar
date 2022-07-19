@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "LSDObjcSugar.h"
 @interface ViewController ()
 
 @end

@@ -12,15 +12,21 @@
 
 +(instancetype)lsd_labelWithText:(NSString *)text fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)textAlignment
 {
-    
     UILabel *label = [[self alloc]init];
-    
     label.text = text;
     label.textColor = textColor;
     label.font = [UIFont systemFontOfSize:fontSize];
-    label.numberOfLines = 0;
     label.textAlignment = textAlignment;
-    
+    [label sizeToFit];
+    return label;
+}
+
++(instancetype)lsd_labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)textAlignment{
+    UILabel *label = [[self alloc]init];
+    label.text = text;
+    label.textColor = textColor;
+    label.font = font;
+    label.textAlignment = textAlignment;
     [label sizeToFit];
     return label;
 }

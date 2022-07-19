@@ -20,4 +20,6 @@
 /// @return UILabel
 +(instancetype)lsd_labelWithText:(NSString *)text fontSize:(CGFloat)fontSize textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)textAlignment;
 
++(instancetype)lsd_labelWithText:(NSString *)text font:(UIFont *)font textColor:(UIColor *)textColor textAlignment:(NSTextAlignment)textAlignment;
+
 @end

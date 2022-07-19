@@ -7,7 +7,6 @@ target 'LSDObjcSugar' do
 
   # Pods for LSDObjcSugar
 
-    pod 'MBProgressHUD'
 
 
   target 'LSDObjcSugarTests' do

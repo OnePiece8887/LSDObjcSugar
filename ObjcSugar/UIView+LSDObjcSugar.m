@@ -22,7 +22,7 @@
 {
     UIViewController *result = nil;
     
-    UIWindow * window = [[UIApplication sharedApplication] keyWindow];
+    UIWindow * window = [[UIApplication sharedApplication] windows].lastObject;
     if (window.windowLevel != UIWindowLevelNormal)
     {
         NSArray *windows = [[UIApplication sharedApplication] windows];
@@ -50,7 +50,7 @@
 ///获取当前屏幕中present出来的viewcontroller
 - (UIViewController *)getPresentedViewController
 {
-    UIViewController *appRootVC = [UIApplication sharedApplication].keyWindow.rootViewController;
+    UIViewController *appRootVC = [UIApplication sharedApplication].windows.lastObject.rootViewController;
     UIViewController *topVC = appRootVC;
     if (topVC.presentedViewController) {
         topVC = topVC.presentedViewController;

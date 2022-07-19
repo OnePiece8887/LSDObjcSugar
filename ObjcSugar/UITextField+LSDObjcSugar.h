@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITextField (LSDObjcSugar)
 
+/// 文本输入框
+/// @param leftViewMargin 左边间隔
+/// @param image 左边图标
 -(void)lsd_leftViewMargin:(CGFloat)leftViewMargin image:(nullable UIImage *)image;
 
 @end
