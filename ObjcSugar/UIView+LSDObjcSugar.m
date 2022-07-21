@@ -84,20 +84,19 @@
     if ([self isKindOfClass:[UITableViewCell class]]) return @"";
     // 1.初始化
     NSMutableString *xml = [NSMutableString string];
-    
+    [xml appendString:@"\n"];
     // 2.标签开头
     [xml appendFormat:@"<%@ frame=\"%@\"", self.class, NSStringFromCGRect(self.frame)];
     if (!CGPointEqualToPoint(self.bounds.origin, CGPointZero)) {
         [xml appendFormat:@" bounds=\"%@\"", NSStringFromCGRect(self.bounds)];
     }
-    
+   
     if ([self isKindOfClass:[UIScrollView class]]) {
         UIScrollView *scroll = (UIScrollView *)self;
         if (!UIEdgeInsetsEqualToEdgeInsets(UIEdgeInsetsZero, scroll.contentInset)) {
             [xml appendFormat:@" contentInset=\"%@\"", NSStringFromUIEdgeInsets(scroll.contentInset)];
         }
     }
-    
     // 3.判断是否要结束
     if (self.subviews.count == 0) {
         [xml appendString:@" />"];
@@ -112,8 +111,11 @@
         [xml appendString:childXml];
     }
     
+    [xml appendString:@"\n"];
+    
     // 5.标签结尾
     [xml appendFormat:@"</%@>", self.class];
+    [xml appendString:@"\n"];
     
     return xml;
     

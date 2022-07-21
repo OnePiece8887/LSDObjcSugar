@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "LSDObjcSugar.h"
 @interface ViewController ()
 
 @end
@@ -15,7 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    NSLog(@"%@",[self.view lsd_xmlWithViewComponent]);
 }
 
 
