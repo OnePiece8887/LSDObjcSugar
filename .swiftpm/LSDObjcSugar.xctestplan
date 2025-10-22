@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "621E15F7-6CCE-4008-8A29-7EAE4A3CADBA",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "LSDObjcSugarTests",
+        "name" : "LSDObjcSugarTests"
+      }
+    }
+  ],
+  "version" : 1
+}
