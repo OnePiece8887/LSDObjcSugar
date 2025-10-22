@@ -14,7 +14,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.ios.deployment_target = "9.0"
   s.source       = {:git => "https://github.com/LSDOnePiece/LSDObjcSugar.git", :tag => s.version.to_s}
-  s.source_files  = "Sources/"
+  s.source_files  = "Sources/LSDObjcSugar/**/*.{h,m}"
+  s.resources    = "Sources/LSDObjcSugar/resources/*"
   s.framework  = "UIKit"
 
   s.requires_arc = true
