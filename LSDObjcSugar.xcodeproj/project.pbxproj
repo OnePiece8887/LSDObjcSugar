@@ -79,6 +79,7 @@
 		267BAA3F16CC00AEFD695A24 /* Pods-LSDObjcSugarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDObjcSugarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSDObjcSugarTests/Pods-LSDObjcSugarTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5423C6EFCDC7A82B1FD8E95B /* Pods-LSDObjcSugarUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDObjcSugarUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSDObjcSugarUITests/Pods-LSDObjcSugarUITests.release.xcconfig"; sourceTree = "<group>"; };
 		80B047236493F2AF33F2A949 /* Pods-LSDObjcSugar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDObjcSugar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSDObjcSugar/Pods-LSDObjcSugar.debug.xcconfig"; sourceTree = "<group>"; };
+		9A9F5B512EA8A7CA000D6795 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		9CF86BEFBCBE97E803B7B3E4 /* libPods-LSDObjcSugarUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LSDObjcSugarUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEE9554CE6374ACD7C4135C9 /* Pods-LSDObjcSugar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDObjcSugar.release.xcconfig"; path = "Pods/Target Support Files/Pods-LSDObjcSugar/Pods-LSDObjcSugar.release.xcconfig"; sourceTree = "<group>"; };
 		C3CC637AD67FEBD733454454 /* Pods-LSDObjcSugarUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LSDObjcSugarUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LSDObjcSugarUITests/Pods-LSDObjcSugarUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		EA6472D41FA6F089002B1D87 = {
 			isa = PBXGroup;
 			children = (
+				9A9F5B512EA8A7CA000D6795 /* Package.swift */,
 				EAB2AA7C1FA709280060052F /* ObjcSugar */,
 				EA6472DF1FA6F08A002B1D87 /* LSDObjcSugar */,
 				EA6472DE1FA6F08A002B1D87 /* Products */,
