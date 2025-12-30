@@ -97,7 +97,7 @@
     
 }
 #pragma mark --icon在title右边
-- (void)setImageRightOfTitleWithSpacing:(CGFloat)spacing {
+- (void)lsd_setImageRightOfTitleWithSpacing:(CGFloat)spacing {
     UIImage *image = self.imageView.image;
     NSString *title = [self titleForState:UIControlStateNormal];
     
