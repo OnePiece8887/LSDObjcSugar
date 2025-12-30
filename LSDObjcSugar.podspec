@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LSDObjcSugar"
-  s.version      = "3.2.2"
+  s.version      = "3.2.3"
   s.summary      = "iOS开发工具类"
 
   s.description  = <<-DESC 
