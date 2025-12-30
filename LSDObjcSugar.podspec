@@ -11,8 +11,8 @@ Pod::Spec.new do |s|
   s.license      = "MIT"
   s.author       = { "liushuai" => "liushuai8887@126.com" }
  
-  s.platform     = :ios, "9.0"
-  s.ios.deployment_target = "9.0"
+  s.platform     = :ios, "12.0"
+  s.ios.deployment_target = "12.0"
   s.source       = {:git => "https://github.com/LSDOnePiece/LSDObjcSugar.git", :tag => s.version.to_s}
   s.source_files  = "Sources/LSDObjcSugar/**/*.{h,m}"
   s.resources    = "Sources/LSDObjcSugar/resources/*"
