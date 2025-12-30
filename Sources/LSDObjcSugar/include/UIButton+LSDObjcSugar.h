@@ -20,5 +20,6 @@
 
 + (instancetype)lsd_buttonWithAttributedText:(NSAttributedString *)attributedText imageName:(NSString *)imageName backImageName:(NSString *)backImageName highlightSuffix:(NSString *)highlightSuffix;
 
-
+#pragma mark --icon在title右边
+- (void)setImageRightOfTitleWithSpacing:(CGFloat)spacing;
 @end
